@@ -1,0 +1,6 @@
+{
+  "remote": "origin",
+  "base": "main",
+  "lessons_dir": "docs/lessons",
+  "kit": "2026.10.20"
+}

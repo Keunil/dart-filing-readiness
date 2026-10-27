@@ -1,0 +1,12 @@
+# agent-kit:begin — worktree·임시 산출물·세션 로컬 파일 (원본 Keunil/agent-kit)
+/.worktrees/
+/.tmp/
+__pycache__/
+*.pyc
+.claude/worktrees/
+.claude/settings.local.json
+.agents/*
+!.agents/skills/
+# 옛 기록 묶음(로컬 보관, 추적하지 않음)
+docs/agent-review/_legacy-*
+# agent-kit:end
