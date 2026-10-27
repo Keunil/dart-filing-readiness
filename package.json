@@ -1,0 +1,11 @@
+{
+  "name": "dart-filing-readiness",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "description": "Browser-local DSD checks for an AI coding assignment",
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "start": "node tools/serve.mjs"
+  }
+}
