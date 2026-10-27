@@ -3,7 +3,7 @@
 - 시작: 2026-10-28
 - 브랜치 / 기준: codex/pwc-report-20261028 / 52db5a9
 - 작성 / 리뷰: Codex / 동일 모델 별도 컨텍스트 독립 Codex
-- 상태: review
+- 상태: cleared
 
 ## 목적
 
@@ -19,7 +19,7 @@
 
 | 라운드 | 대상 커밋 | 요청 | 리뷰 | 대응 | 판정 |
 |---|---|---|---|---|---|
-| r01 | 7ddfadf | r01-request.md | pending | pending | pending |
+| r01 | 7ddfadf | r01-request.md | r01-review.md | r01-resolution.md | cleared |
 
 ## 남은 지적·미검증
 
