@@ -7,15 +7,15 @@
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; object-src 'none'; base-uri 'none'; form-action 'none'">
   <title>DART Filing Readiness | 제출 전 구조 점검</title>
-  <link rel="icon" href="./favicon.svg" type="image/svg+xml">
+  <link rel="icon" href="./assets/favicon.ico" sizes="32x32">
   <link rel="stylesheet" href="./app.css">
   <script type="module" src="./app.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">본문으로 이동</a>
   <header class="topbar">
-    <a href="./" class="brand" aria-label="DART Filing Readiness 처음 화면"><span class="brand-mark" aria-hidden="true">F<span>✓</span></span><span>DART <strong>Filing Readiness</strong></span></a>
-    <span class="project-tag">AI와 함께 만든 공시 점검 도구</span>
+    <a href="./" class="brand" aria-label="DART Filing Readiness 처음 화면"><img class="brand-logo" src="./assets/pwc-logo.svg" alt="PwC" width="46" height="32"><span>DART <strong>Filing Readiness</strong></span></a>
+    <span class="project-tag">최근일 · 2026505521 · AI 코딩 과제</span>
     <a class="source-link" href="https://github.com/Keunil/dart-filing-readiness" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
   </header>
   <div class="layout">
@@ -24,13 +24,13 @@
       <ol class="steps"><li class="active" id="step-file"><span>01</span><div>파일 선택<small>DSD 또는 체험 샘플</small></div></li><li id="step-check"><span>02</span><div>구조 점검<small>서식별 규칙 적용</small></div></li><li id="step-review"><span>03</span><div>확인 및 내보내기<small>근거 확인 · 수동 검토</small></div></li></ol>
       <div class="privacy"><span class="privacy-icon" aria-hidden="true">↳</span><strong>파일은 내 브라우저에</strong><p>선택한 DSD와 점검 결과는 서버로 전송하거나 저장하지 않습니다.</p><small>새로고침하거나 비우면 사라집니다.</small></div>
       <div class="scope-note"><strong>지원 서식</strong><p>감사·연결감사보고서<br>분·반기 (연결)검토보고서</p><small>00760 · 00761<br>90020 · 90220 · 90320 · 90420</small></div>
-      <p class="sidebar-bottom">과제 2 · Vibe Coding<br>Independent student project</p>
+      <p class="sidebar-bottom">과제 2 · Vibe Coding<br>삼일회계법인 Assurance · 최근일</p>
     </aside>
     <main id="main">
       <section class="hero" id="intro">
         <div class="eyebrow"><span></span> 접수 전, 구조부터.</div>
         <h1>DART 제출 전<br><em>한 번 더</em> 확인하세요.</h1>
-        <p class="hero-copy">반복되는 체크는 자동으로, 판단이 필요한 곳은 사람에게.<br>감사·검토보고서의 오류 후보와 원문 근거를 한곳에서 확인합니다.</p>
+        <p class="hero-copy">공시팀의 반복 점검을 돕는 회계사의 업무 도구.<br>감사·검토보고서의 오류 후보와 원문 근거를 한곳에서 확인합니다.</p>
         <div class="benefits"><span>✓ 서식에 맞는 점검</span><span>✓ 원문 위치 확인</span><span>✓ 검토 결과 다운로드</span></div>
       </section>
       <section class="input-section" aria-labelledby="input-title">
@@ -66,7 +66,7 @@
         </div>
       </section>
       <section class="how-it-works"><div><span class="section-kicker">HOW IT WORKS</span><h2>반복 업무의 앞단을 가볍게.</h2></div><div class="how-steps"><p><b>1. 읽기</b><span>DSD 압축 안의 XML을 읽어<br>표지·본문·주석으로 구조화합니다.</span></p><p><b>2. 점검</b><span>서식과 감사인 기준에 따라<br>규칙을 적용하고 근거를 찾습니다.</span></p><p><b>3. 검토</b><span>오류 후보와 수동 항목을 확인하고<br>결과를 파일로 가져갑니다.</span></p></div></section>
-      <footer class="footer"><span>DART Filing Readiness · 2026</span><span>공시 접수 및 감사인의 전문적 판단을 대체하지 않는 학습용 점검 도구입니다.</span></footer>
+      <footer class="footer"><span>2026505521 최근일 · AI 코딩 과제</span><span>공시 접수 및 감사인의 전문적 판단을 대체하지 않는 학습용 점검 도구입니다.</span></footer>
     </main>
   </div>
   <dialog id="evidence-dialog"><div class="dialog-heading"><div><span class="section-kicker">SOURCE EVIDENCE</span><h2 id="evidence-title">원문 근거</h2></div><button id="evidence-close" class="close-button" aria-label="원문 근거 닫기">×</button></div><div id="evidence-findings"></div><details id="header-details"><summary>문서 헤더정보</summary><dl id="header-rows"></dl></details><div class="source-label">DSD 원문 <span>원문을 자동 수정하지 않습니다.</span></div><div id="source-view"></div></dialog>

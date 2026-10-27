@@ -6,7 +6,8 @@ const port = Number(process.env.PORT || 4173);
 const types = { '.html': 'text/html; charset=utf-8', '.js': 'text/javascript; charset=utf-8', '.css': 'text/css; charset=utf-8', '.svg': 'image/svg+xml', '.png': 'image/png', '.jpg': 'image/jpeg' };
 const server = createServer(async (req, res) => {
   try {
-    const pathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
+    const rawPathname = decodeURIComponent(new URL(req.url, 'http://localhost').pathname);
+    const pathname = rawPathname.startsWith('/public/') ? rawPathname.slice('/public'.length) : rawPathname;
     const selectedRoot = pathname.startsWith('/screenshots/') ? resolve('screenshots') : root;
     const path = pathname === '/report.html' ? resolve('docs/development-report.html') :
       resolve(selectedRoot, '.' + (selectedRoot === root ? pathname : pathname.slice('/screenshots'.length)));
