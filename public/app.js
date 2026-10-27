@@ -41,20 +41,26 @@ function releaseView() {
   state.view = null;
   $('source-view').replaceChildren();
 }
-function clearDocument() {
-  state.operation++;
+function discardReport() {
+  if ($('evidence-dialog').open) $('evidence-dialog').close();
   state.current = null;
   state.source = null;
   state.checked.clear();
   releaseView();
-  $('file-input').value = '';
+  // Remove document text and row handlers as well as hiding the report.
+  for (const id of ['result-rows', 'stats', 'evidence-findings', 'header-rows', 'file-meta', 'scope-banner', 'list-count', 'manual-count']) $(id).replaceChildren();
+  $('evidence-title').textContent = '원문 근거';
   $('results').hidden = true;
+}
+function clearDocument() {
+  state.operation++;
+  discardReport();
+  $('file-input').value = '';
   $('search').value = '';
   $('status-filter').value = 'all';
   $('step-file').classList.add('active');
   $('step-check').classList.remove('active');
   $('step-review').classList.remove('active');
-  if ($('evidence-dialog').open) $('evidence-dialog').close();
   setBusy(false);
   notify('문서와 점검 결과를 비웠습니다.');
 }
@@ -64,11 +70,7 @@ async function run(sourceFactory, isSample = false) {
   setBusy(true);
   // Remove the preceding report immediately so a failed replacement can never
   // leave an old result looking like the result for the newly selected file.
-  state.current = null;
-  state.source = null;
-  state.checked.clear();
-  releaseView();
-  $('results').hidden = true;
+  discardReport();
   $('file-input').value = '';
   $('search').value = '';
   $('status-filter').value = 'all';
@@ -263,6 +265,7 @@ $('export-xlsx').addEventListener('click', async () => {
   const current = state.current;
   try {
     const bytes = await xlsxBytes(current.result.results, new Set(state.checked), { name: current.doc.name, code: current.scope.code, checkedAt: current.checkedAt, profile: current.profile.name });
+    if (state.current !== current) return;
     download(bytes, 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet', 'DART-점검결과.xlsx');
   } catch (error) { notify('엑셀 파일 생성에 실패했습니다: ' + error.message, true); }
 });

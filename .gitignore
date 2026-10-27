@@ -10,3 +10,6 @@ __pycache__/
 # 옛 기록 묶음(로컬 보관, 추적하지 않음)
 docs/agent-review/_legacy-*
 # agent-kit:end
+/dist/
+/.vercel/
+/node_modules/
