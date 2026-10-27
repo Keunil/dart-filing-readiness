@@ -1,18 +1,20 @@
 {
-  "date": "2026-10-27",
+  "date": "2026-10-28",
   "app_url": "https://dart-filing-readiness-keunil.tasty-note-8705.chatgpt.site",
   "github_url": "https://github.com/Keunil/dart-filing-readiness",
   "source_baseline": "0d4d1c6a2753c1c5e5499495dcd5fb67a152605e",
-  "deployment_source": "a28f0b1eeb96bb8a1609dde5230f3b9ba3f525a0",
+  "deployment_source": "62438b461557b1646dcff81d9b870d5a668d8fea",
   "node_tests": {
     "passed": 11,
     "failed": 0,
     "skipped": 0
   },
-  "pdf_pages": 10,
+  "pdf_pages": 11,
   "sha256": {
-    "public/app.css": "24fcef6667f1ce953425d3bb644d4b7c3a370bbaa86fc72aec8eea04c5b95607",
+    "public/app.css": "8ad3accf26141c52d14f40fabc15b042c605dd416aa2a992a5afd52ed20e720e",
     "public/app.js": "e121b65b5e968e175d6cf264cd3801d975c297d02dafa15cb16247fe81d9e802",
+    "public/assets/favicon.ico": "e9f698997d5ab98afeb24fc818327e8e66d2b736ea1f426aa3c1962e64b8d300",
+    "public/assets/pwc-logo.svg": "64c179ca0c5adbe94f97a9cc4324a1eae263ffe2eca8719c33e539de4c005df2",
     "public/core/checklist-history.js": "3598d4eeb4c57662f9a90df2819cef5d34579240ae3b75fbdf2f6a34ce68ae9c",
     "public/core/checklist-interim.js": "e4b594e5ca342185b7a179f07e21f3a34380c5492ff4c67f746110e88ee697d9",
     "public/core/checklist-notes.js": "36cca80364b46a83db4d897d4a0241b9190fc8a90ef36cf4363983a18fe5d4cc",
@@ -22,13 +24,18 @@
     "public/core/dsd-xlsx.js": "a5a203c09d2ad4dd12fb95059fb11a499ec1d35c6db43599b544fc0f27760d4a",
     "public/engine.js": "18127b1d60a5b69bd8d3e59f8f014e15027bb254d2d9eab5ce7fe077ab33465d",
     "public/export.js": "01108e1518c433b61117305c6622c08e65e6f4569c46d47e0fe0a4fcc73b175c",
-    "public/favicon.svg": "085f502f7ac931e58a196ccedbcfa445a9a7bf88065058b3d1b6b29aa4820139",
-    "public/index.html": "aaa0d9934ed0e037ce7e7044e75b148ee37c9e53ff289d78329fd47c5a0de1a1",
+    "public/index.html": "f96961e1d9f71dbf71364628f2b1ed4321a95ec741d9cd1b15458b19df0cb047",
     "public/samples.js": "8c7cddb0d036e03ea8e933959569982aa50421665e4aeab4b3718cbf0cec30d9",
-    "screenshots/01-home.jpg": "e123b6c9c97c6a177af452c7db09db2c3a4aba6c08c0d1fa3fd5773db7703968",
-    "screenshots/02-findings.jpg": "15237c6aee10b08611552bdaf1dab15bb0969e60282791d430294bd89aeeff96",
-    "screenshots/03-evidence.jpg": "6c46a2c1acfbdfd6cc206dd3bd928e157e6d6919f339827204567e026a5240ae",
-    "screenshots/04-mobile.jpg": "cca9d53c07d6a7fd4a4ee21a27fa2e1fdd82b1191ace0f39c51eb3603932b55c",
-    "submission/DART-Filing-Readiness-과제2.pdf": "786edf688a249a5adf7cecd928ffc64ff83a1fe407022b1a4866e0cf9fcb79eb"
+    "screenshots/01-home.jpg": "d784861f7fc8b9b43432615df9093a3e26442334182ead09e9bbb0c70403f039",
+    "screenshots/02-findings.jpg": "824c82c7620cbd30c9e719858ec69e17d8fc0c35957c69641e5e321c86455a95",
+    "screenshots/03-evidence.jpg": "669d219fd98d07160455ae99f4b861dacaa4851e3ea3b429597561089e9a2db7",
+    "screenshots/04-mobile.jpg": "382f0d370cd83856ccca92832e985b5de74b357ccd032bf33a6ef8597484bae7",
+    "submission/DART-Filing-Readiness-과제2.pdf": "7ab39c44b37097bff3aab4ba50c64453b8e914a535aace65015d85b907a12efc"
+  },
+  "author": {
+    "name": "최근일",
+    "student_id": "2026505521",
+    "organization": "삼일회계법인",
+    "role": "회계사 · Assurance"
   }
 }
