@@ -8,6 +8,7 @@
 :root{--ink:#182d36;--sub:#50646d;--teal:#076c68;--pale:#eef7f5;--line:#d7e4e2;--paper:#fff;--bg:#eaf0ef}
 *{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font-family:"Malgun Gothic","Apple SD Gothic Neo",sans-serif;font-size:10.4pt;line-height:1.72}main{width:210mm;margin:22px auto}.page{width:210mm;min-height:297mm;padding:17mm 18mm 15mm;background:var(--paper);margin-bottom:18px;box-shadow:0 6px 30px #163a3410;position:relative}.eyebrow{font-size:10pt;color:var(--teal);font-weight:800;letter-spacing:.09em}h1{font-size:32pt;line-height:1.26;letter-spacing:-.06em;margin:16mm 0 6mm}h1 span{display:block;font-size:17pt;font-weight:500;margin-top:4mm}h2{font-size:19pt;line-height:1.4;letter-spacing:-.04em;margin:2mm 0 7mm;padding-bottom:4mm;border-bottom:2px solid var(--teal)}h3{font-size:12pt;margin:6mm 0 2mm;color:var(--teal)}p{margin:2.6mm 0}a{color:var(--teal);overflow-wrap:anywhere}strong{font-weight:750}ul,ol{padding-left:5mm;margin:3mm 0}li{margin:1.5mm 0}.lede{font-size:13pt;color:var(--sub);line-height:1.8}.meta{border-top:1px solid var(--line);border-bottom:1px solid var(--line);padding:4mm 0;margin:7mm 0;color:var(--sub)}.box{background:var(--pale);border-left:3px solid var(--teal);padding:4mm 5mm;margin:5mm 0}.muted{color:var(--sub)}.small{font-size:9pt}.label{display:inline-block;font-size:8.7pt;color:var(--teal);font-weight:700;letter-spacing:.04em}.folio{margin-top:7mm;border-top:1px solid var(--line);padding-top:3mm;font-size:8pt;color:var(--sub);display:flex;justify-content:space-between}table{border-collapse:collapse;width:100%;margin:4mm 0;font-size:9.3pt;line-height:1.6}th,td{border-bottom:1px solid var(--line);padding:2.7mm 3mm;text-align:left;vertical-align:top}th{background:var(--pale);font-weight:750}code{font-family:Consolas,monospace;font-size:.92em;background:#f2f5f4;padding:0 1mm;overflow-wrap:anywhere}.flow{display:grid;grid-template-columns:repeat(3,1fr);gap:3mm;margin:5mm 0}.flow>div{padding:4mm;background:var(--pale);border:1px solid var(--line);border-radius:2mm}.flow b{display:block;color:var(--teal);margin-bottom:2mm}figure{margin:5mm 0 6mm}figure img{display:block;width:100%;max-height:91mm;object-fit:contain;object-position:top left;border:1px solid var(--line);background:#f6f9f8}figcaption{font-size:9pt;color:var(--sub);margin-top:2mm}.image-pair{display:grid;grid-template-columns:1.9fr 1fr;gap:5mm;align-items:start}.image-pair img{max-height:149mm}.case{margin:4mm 0 5mm;break-inside:avoid}.case h3{margin-top:4mm}.case p{font-size:9.6pt;line-height:1.66;margin:2mm 0}.status{padding:3mm 4mm;border:1px solid var(--line);margin:3mm 0;overflow-wrap:anywhere}.compact td{padding:2mm 2.5mm}.print-note{font-size:9pt;color:var(--sub);text-align:center;margin:15px}.case-label{font-weight:750;color:var(--ink)}
 @page{size:A4;margin:14mm 16mm}@media print{body{background:#fff;font-size:9.8pt;line-height:1.65}h1{font-size:30pt;line-height:1.2;margin:10mm 0 5mm}h3{margin-top:5mm}table{font-size:9.1pt}main{width:auto;margin:0}.page{width:auto;min-height:265mm;margin:0;padding:0;box-shadow:none;break-after:page}.page:last-child{break-after:auto}.print-note{display:none}h2,h3{break-after:avoid}table,figure,.box,.flow,.case{break-inside:avoid}a{color:var(--teal);text-decoration:none}*{-webkit-print-color-adjust:exact;print-color-adjust:exact}.folio{margin-top:5mm}figure img{max-height:86mm}.image-pair img{max-height:140mm}}
+@media print{.flow{margin:3mm 0;gap:2mm}.flow>div{padding:2.5mm}.flow b{margin-bottom:1mm}.image-pair img{max-height:90mm}.page:nth-of-type(5) td,.page:nth-of-type(5) th{padding:2mm 3mm}}
 @media screen and (max-width:820px){main,.page{width:auto}.page{min-height:0;margin:0 0 12px;padding:28px 22px}.flow{grid-template-columns:1fr}.image-pair{grid-template-columns:1fr}h1{font-size:29px;margin-top:24px}h1 span{font-size:19px}h2{font-size:24px}.image-pair img{max-height:420px}}
 </style>
 </head>
@@ -18,13 +19,13 @@
   <div class="eyebrow">과제 2 · AI와 함께 만들기</div>
   <h1>DART Filing<br>Readiness<span>감사·검토보고서 접수 전 구조 점검</span></h1>
   <p class="lede">반복되는 수기 체크를 먼저 정리하고,<br>담당자가 확인할 문제와 원문 근거를 함께 보여 주는 웹 앱</p>
-  <div class="meta">제출자: 제출 전 기입<br>작성 기준일: 2026년 10월 27일<br>제출 기한: 2026년 10월 28일(수) 자정 · LearnUs</div>
+  <div class="meta">제출자: ____________________ · 학번: ____________________<br>작성 기준일: 2026년 10월 27일<br>제출 기한: 2026년 10월 28일(수) 자정 · LearnUs</div>
   <h3>1. 발견한 문제와 개발 목적</h3>
   <p>DART에 감사·검토보고서를 접수하기 전, R&amp;Q 공시팀은 보고서의 구조와 기재 사항을 체크리스트에 따라 확인한다. 업무가 집중되는 시기에는 인턴을 포함한 여러 인력이 투입되어도 항목을 하나씩 수기로 확인하는 과정에서 병목이 발생하고 오류가 반복된다.</p>
   <p>이 앱은 보고서에서 기계적으로 확인할 수 있는 항목을 먼저 점검한다. 담당자는 오류·확인 필요 항목과 원문 위치를 확인하고, 자동으로 판단할 수 없는 부분에 집중한다. 기존 인원 수나 오류율, 개발 전후 처리시간은 측정 자료가 없어 수치로 제시하지 않았다.</p>
-  <div class="box"><strong>제출 앱</strong><br><a href="{{APP_URL}}">{{APP_URL}}</a><br><strong>GitHub Repository</strong><br><a href="https://github.com/Keunil/dart-filing-readiness">https://github.com/Keunil/dart-filing-readiness</a></div>
+  <div class="box"><strong>제출 앱</strong><br><a href="https://dart-filing-readiness-keunil.tasty-note-8705.chatgpt.site">https://dart-filing-readiness-keunil.tasty-note-8705.chatgpt.site</a><br><strong>GitHub Repository</strong><br><a href="https://github.com/Keunil/dart-filing-readiness">https://github.com/Keunil/dart-filing-readiness</a></div>
   <p class="small muted">기존 robotic_web의 DSD 읽기·점검 엔진을 재사용하고, 이번 과제에서 독립 화면·감사인 프로필·가상 체험·결과 탐색·공개 배포와 보고서를 구성했다. 기존 기능 전체를 이번에 새로 개발한 것으로 표현하지 않는다.</p>
-  <div class="folio"><span>DART Filing Readiness · 개발 보고서</span><span>1 / 9</span></div>
+  <div class="folio"><span>DART Filing Readiness · 개발 보고서</span><span>1 / 10</span></div>
 </section>
 
 <section class="page">
@@ -55,7 +56,7 @@
   <p>연차 감사보고서 코드는 <code>00760</code>·<code>00761</code>, 분·반기 검토보고서 코드는 <code>90020</code>·<code>90220</code>·<code>90320</code>·<code>90420</code>이다. 범위 밖이나 코드 미확인 입력에는 연차 규칙을 임의로 적용하지 않는다.</p>
   <p>연차 점검은 기본 체크리스트 55개와 보조 점검으로 구성된다. 항목의 적용 여부와 자동·수동 확인 범위가 다르므로 전체 항목 수를 자동 검증된 항목 수로 해석하지 않는다.</p>
   <div class="box"><strong>완료 기준</strong><br>공개 URL에서 체험 실행 → 결과 표시 → 원문 근거 확인 → 결과 다운로드를 수행할 수 있고, 수동 확인이 남은 상태를 자동 통과로 표시하지 않아야 한다.</div>
-  <div class="folio"><span>DART Filing Readiness · 개발 보고서</span><span>2 / 9</span></div>
+  <div class="folio"><span>DART Filing Readiness · 개발 보고서</span><span>2 / 10</span></div>
 </section>
 
 <section class="page">
@@ -80,7 +81,7 @@
   <p>원본 기준 커밋은 <code>0d4d1c6a2753c1c5e5499495dcd5fb67a152605e</code>다. DSD 해석과 규칙 실행을 재사용해 기존 판정의 경계를 보존했다. 이번에는 독립 앱에 필요한 화면·프로필 설정·가상 샘플·내보내기·배포·제출 문서를 구성했다.</p>
   <p>독립 공개본에는 업무 시스템의 사내 메뉴·내부 링크·회사 로고·실제 고객 자료를 넣지 않는다. 파일별 출처와 변경은 저장소의 <code>docs/provenance.md</code>에서 확인할 수 있다.</p>
   <div class="box"><strong>설명할 수 있는 작동 원리</strong><br>“서버는 화면 파일만 보냅니다. 브라우저가 DSD의 ZIP/XML을 읽어 문서 종류에 맞는 규칙을 실행하고, 결과와 근거 위치를 표시합니다. 의미 판단이 필요한 부분은 사람이 확인합니다.”</div>
-  <div class="folio"><span>DART Filing Readiness · 개발 보고서</span><span>3 / 9</span></div>
+  <div class="folio"><span>DART Filing Readiness · 개발 보고서</span><span>3 / 10</span></div>
 </section>
 
 <section class="page">
@@ -96,7 +97,7 @@
     <figcaption>그림 2. 점검 결과. 오류·확인 필요·수동 확인 등의 상태를 구분하고 필요한 결과를 찾는다.</figcaption>
   </figure>
   <p class="small muted">화면 캡처는 해당 시점의 기능 동작을 보여 주는 자료다. 특정 샘플의 결과를 실제 전체 보고서에 대한 정확도나 제출 승인으로 일반화하지 않는다.</p>
-  <div class="folio"><span>DART Filing Readiness · 개발 보고서</span><span>4 / 9</span></div>
+  <div class="folio"><span>DART Filing Readiness · 개발 보고서</span><span>4 / 10</span></div>
 </section>
 
 <section class="page">
@@ -125,7 +126,7 @@
     </tbody>
   </table>
   <p>담당자의 확인 체크는 원래 기계 판정과 별도로 표시한다. 체크를 했다는 사실을 자동 검증 성공이나 보고서 전체의 품질 승인으로 바꾸지 않는다.</p>
-  <div class="folio"><span>DART Filing Readiness · 개발 보고서</span><span>5 / 9</span></div>
+  <div class="folio"><span>DART Filing Readiness · 개발 보고서</span><span>5 / 10</span></div>
 </section>
 
 <section class="page">
@@ -157,7 +158,7 @@
     <p><span class="case-label">최종 결과·한계</span> 원본의 수동 판단 경계를 보존했다. 최종 업무 품질 승인은 실제 담당자의 확인이 필요하다.</p>
   </article>
   <p class="small muted">위 네 사례는 구조·재사용 결정과 개선 사항이다. 실제 실행 중 발견·수정한 기능 오류와 경계 입력 시험은 다음 절에 따로 기록한다.</p>
-  <div class="folio"><span>DART Filing Readiness · 개발 보고서</span><span>6 / 9</span></div>
+  <div class="folio"><span>DART Filing Readiness · 개발 보고서</span><span>6 / 10</span></div>
 </section>
 
 <section class="page">
@@ -180,14 +181,34 @@
     <p><span class="case-label">최종 결과</span> 경계 입력 fixture를 포함한 Node 테스트가 통과했고 브라우저에서 CSV·XLSX 다운로드도 성공했다. 모든 Excel 버전의 실제 열기 동작을 확인한 것은 아니며 실제 피해가 있었다고 주장하지 않는다.</p>
   </article>
   <p class="small muted">상세 기록: docs/ai-collaboration.md · 재현 및 재실행은 Agent 수행. 사용자의 직접 UAT는 미실행이다.</p>
-  <div class="folio"><span>DART Filing Readiness · 개발 보고서</span><span>7 / 9</span></div>
+  <div class="folio"><span>DART Filing Readiness · 개발 보고서</span><span>7 / 10</span></div>
+</section>
+
+<section class="page">
+  <span class="label">INDEPENDENT REVIEW &amp; RESPONSIVE FIX</span>
+  <h2>8. 독립 리뷰와 추가 개선</h2>
+  <article class="case">
+    <h3>G. 비워진 화면에 남은 문서 텍스트</h3>
+    <p><span class="case-label">문제 상황</span> 독립 리뷰에서 ‘문서 비우기’가 결과를 가리기만 하고 결과행·근거·헤더·파일 메타의 텍스트와 이벤트를 남기는 것을 발견했다. 메모리에서만 처리한다는 설명을 지키려면 숨김과 제거를 구별해야 했다.</p>
+    <p><span class="case-label">AI 활용</span> 작성자와 별도 컨텍스트의 Codex에게 고정 커밋을 읽기 전용으로 검토하도록 맡겼다. 검토자가 실제 초기화 함수를 메모리 DOM 대역에서 실행해 잔존을 재현했고, 작성 Agent가 수용했다.</p>
+    <p><span class="case-label">해결 과정</span> 공용 초기화 함수에서 상태·원문 뷰·Blob URL과 문서별 DOM을 함께 제거했다. 문서 비우기뿐 아니라 새 파일을 읽기 시작하거나 실패하는 경우에도 같은 경로를 사용한다.</p>
+    <p><span class="case-label">최종 결과</span> 수정 전 소스에서 회귀 시험 2개가 실패하고 수정본에서 통과했다. 브라우저에서도 회사명 잔존 false, 근거·헤더·원문·메타 텍스트 길이 0을 확인했다. 브라우저 메모리의 물리적 덮어쓰기를 보증하는 기능은 아니다.</p>
+  </article>
+  <article class="case">
+    <h3>H. 모바일 결과 표의 가로 넘침</h3>
+    <p><span class="case-label">문제 상황</span> 좁은 화면에서 결과가 나타나자 문서 폭이 582px로 늘어나 실제 내용 영역 375px를 넘었다. 첫 화면만 봐서는 찾지 못한 문제였다.</p>
+    <p><span class="case-label">AI 활용</span> Codex가 브라우저의 반응형 폭을 적용해 결과 생성 전후의 페이지 폭을 비교했다. 표의 최소 폭이 grid 자식을 밀어내는 경로를 좁혔다.</p>
+    <p><span class="case-label">해결 과정</span> main의 최소 폭을 0으로, 표 컨테이너의 최대 폭을 100%로 제한했다. 표의 열은 보존하고 표 안에서만 가로 스크롤하게 했다.</p>
+    <p><span class="case-label">최종 결과</span> 재시험에서 페이지 폭과 문서 폭이 모두 375px로 같았다. 표 내부 334px에 내용 540px만 스크롤된다. 실제 모바일 기기 전체를 시험한 것은 아니다.</p>
+  </article>
+  <div class="folio"><span>DART Filing Readiness · 개발 보고서</span><span>8 / 10</span></div>
 </section>
 
 <section class="page">
   <span class="label">VALIDATION &amp; SUBMISSION</span>
-  <h2>8. 실행 확인과 비교 결과</h2>
+  <h2>9. 실행 확인과 비교 결과</h2>
   <h3>검증 결과</h3>
-  <div class="status"><strong>개발자 테스트</strong><br>Node 테스트 9/9 통과, 실패 0, 건너뜀 0. CSV 수식 접두 문자 보호와 XLSX 문자열 셀 fixture를 포함한다.</div>
+  <div class="status"><strong>개발자 테스트</strong><br>Node 테스트 11/11 통과, 실패 0, 건너뜀 0. CSV 수식 접두 문자 보호와 XLSX 문자열 셀 fixture를 포함한다.</div>
   <h3>브라우저에서 확인한 합성 샘플 결과</h3>
   <table class="compact">
     <thead><tr><th>입력</th><th>오류</th><th>확인 필요</th><th>수동 확인</th><th>통과</th><th>해당 없음</th></tr></thead>
@@ -205,25 +226,25 @@
     <li>근거 창 스크롤 수정 후 닫기 버튼 노출 확인.</li>
     <li>시작·결과·근거·모바일 주요 화면은 Agent가 캡처.</li>
   </ul>
-  <div class="status"><strong>배포 상태</strong><br>{{DEPLOYMENT_STATUS}}</div>
-  <div class="status"><strong>독립 검토</strong><br>{{REVIEW_STATUS}}</div>
+  <div class="status"><strong>배포 상태</strong><br>Sites 공개 배포 성공(2026-10-27 KST). 비인증 HTTP 200 및 공개 주소의 합성 샘플 실행을 확인했다. Vercel용 정적 배포 설정도 저장소에 포함했다.</div>
+  <div class="status"><strong>독립 검토</strong><br>작성자와 동일 모델의 별도 컨텍스트에서 독립 소스 검토를 수행했다. 숨겨진 DOM 잔존 1건을 재현해 수정하고 회귀 시험을 추가했다. 다른 모델 리뷰와 현업 품질 승인은 미실행이다.</div>
   <div class="box"><strong>미검증과 승인 경계</strong><br>사용자의 직접 UAT, 실제 업무 자료 대량 검증, 오류율·업무시간 감소 효과와 담당자의 품질 승인은 미검증이다. 자동 테스트·Agent 브라우저 확인을 이 단계의 완료로 바꾸지 않는다.</div>
-  <div class="folio"><span>DART Filing Readiness · 개발 보고서</span><span>8 / 9</span></div>
+  <div class="folio"><span>DART Filing Readiness · 개발 보고서</span><span>9 / 10</span></div>
 </section>
 
 <section class="page">
   <span class="label">DELIVERABLES &amp; NEXT STEPS</span>
-  <h2>9. 과제 제출물과 남은 단계</h2>
+  <h2>10. 과제 제출물과 남은 단계</h2>
   <p>이 보고서는 앱 URL·GitHub 주소·개발 목적과 주요 기능·화면 캡처·AI 활용 및 문제 해결 과정을 함께 제시한다. URL 공개, 사용자의 확인, LearnUs 제출은 각각 따로 확인한다.</p>
   <h3>과제 제출물 대응</h3>
   <table class="compact">
     <thead><tr><th style="width:27%">필수 제출물</th><th>보고서·저장소 위치</th></tr></thead>
     <tbody>
-      <tr><td>웹 앱 URL</td><td><a href="{{APP_URL}}">{{APP_URL}}</a></td></tr>
+      <tr><td>웹 앱 URL</td><td><a href="https://dart-filing-readiness-keunil.tasty-note-8705.chatgpt.site">https://dart-filing-readiness-keunil.tasty-note-8705.chatgpt.site</a></td></tr>
       <tr><td>GitHub URL</td><td><a href="https://github.com/Keunil/dart-filing-readiness">github.com/Keunil/dart-filing-readiness</a></td></tr>
       <tr><td>개발 목적·주요 기능</td><td>보고서 1~2절</td></tr>
       <tr><td>주요 화면 캡처</td><td>보고서 4~5절 · screenshots/</td></tr>
-      <tr><td>AI 활용·문제 해결</td><td>보고서 6~7절 · docs/ai-collaboration.md</td></tr>
+      <tr><td>AI 활용·문제 해결</td><td>보고서 6~8절 · docs/ai-collaboration.md</td></tr>
     </tbody>
   </table>
   <h3>평가 기준과 연결</h3>
@@ -231,7 +252,7 @@
   <h3>확장 방향</h3>
   <p>다양한 실제 공시 문서를 담당자의 정답과 대조해 과탐·누락을 확인하고, 서식 변화에 맞춰 규칙과 회귀 시험을 갱신할 수 있다. 이후 실제 담당자의 검토시간과 수정 내역을 수집하면 업무 개선 효과를 측정할 수 있다. 현재 보고서는 그러한 효과가 입증되었다고 주장하지 않는다.</p>
   <div class="box"><strong>제출 전 확인</strong><br>제출자 정보를 기입하고, 공개 앱과 GitHub 링크를 직접 열어 체험을 확인한 뒤 개발 보고서를 LearnUs에 제출한다. 보고서 생성과 LearnUs 제출은 별도 단계다.</div>
-  <div class="folio"><span>DART Filing Readiness · 개발 보고서</span><span>9 / 9</span></div>
+  <div class="folio"><span>DART Filing Readiness · 개발 보고서</span><span>10 / 10</span></div>
 </section>
 </main>
 </body>

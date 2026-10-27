@@ -2,7 +2,7 @@
 
 DART 접수 전 감사·검토보고서의 구조를 브라우저에서 점검하는 과제용 웹 애플리케이션입니다. 업무 집중기에 반복되는 수기 체크를 보조하고, 담당자가 확인할 오류와 원문 위치를 함께 보여 줍니다.
 
-- 웹 앱: {{APP_URL}}
+- 웹 앱: https://dart-filing-readiness-keunil.tasty-note-8705.chatgpt.site
 - 소스: [Keunil/dart-filing-readiness](https://github.com/Keunil/dart-filing-readiness)
 - 개발 보고서: [docs/development-report.html](docs/development-report.html)
 - 요구사항과 완료 기준: [docs/requirements.md](docs/requirements.md)
@@ -50,13 +50,13 @@ python -m http.server 8765 --directory public
 node --test tests/*.test.mjs
 ```
 
-실제 실행 결과: Node 테스트 9/9 통과, 실패 0, 건너뜀 0. CSV의 수식 접두 문자 보호와 XLSX 문자열 셀 확인을 포함합니다. Agent의 브라우저 시험에서 합성 DSD 점검·CSV/XLSX 다운로드·수동 확인 후 자동 판정 유지·근거 창 닫기 버튼 노출을 확인했습니다. 사용자의 직접 UAT와 실제 업무 자료의 대량 검증은 미실행입니다.
+실제 실행 결과: Node 테스트 11/11 통과, 실패 0, 건너뜀 0. CSV의 수식 접두 문자 보호와 XLSX 문자열 셀 확인을 포함합니다. Agent의 브라우저 시험에서 합성 DSD 점검·CSV/XLSX 다운로드·수동 확인 후 자동 판정 유지·근거 창 닫기 버튼 노출을 확인했습니다. 사용자의 직접 UAT와 실제 업무 자료의 대량 검증은 미실행입니다.
 
 ## 배포
 
-현재 상태: {{DEPLOYMENT_STATUS}}
+현재 상태: Sites 공개 배포 성공(2026-10-27 KST). 비인증 HTTP 200 및 공개 주소의 합성 샘플 실행을 확인했다. Vercel용 정적 배포 설정도 저장소에 포함했다.
 
-정적 호스팅의 게시 디렉터리는 `public/`입니다. 백엔드, 데이터베이스, 로그인, 외부 AI API 키가 필요하지 않습니다. Vercel을 사용할 경우 저장소를 가져오고 프레임워크를 Other, 게시 디렉터리를 `public`으로 설정합니다. 저장소의 배포 설정과 실제 공개 접속 확인 결과를 개발 보고서에서 함께 확인합니다.
+원본 정적 파일은 `public/`에 있으며 Sites는 `node tools/build.mjs`로 복사한 `dist/`를 배포합니다. 백엔드, 데이터베이스, 로그인, 외부 AI API 키가 필요하지 않습니다. Vercel을 사용할 경우 저장소를 가져오고 프레임워크를 Other, 게시 디렉터리를 `public`으로 설정합니다. 저장소의 배포 설정과 실제 공개 접속 확인 결과를 개발 보고서에서 함께 확인합니다.
 
 ## 기존 코드와 이번 과제의 범위
 
