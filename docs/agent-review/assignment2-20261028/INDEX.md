@@ -36,3 +36,5 @@ r06 완료: 같은 모델 별도 컨텍스트 검토 cleared. 수정 문장, 6�
 
 ## r07 Claude CLI 과제 요구사항 대조
 대상 d2345b19a6d398c48ed969ab7923d84808774d6f. 사용자 요청에 따라 Claude CLI로 과제 원문과 최종 Word를 독립 대조한다. Claude CLI 인증 확인은 2026-10-28 22:35 KST 성공, 모델 claude-opus-5-5, 도구 없는 OK 호출이었다. 본 검토는 읽기 전용 도구로 진행한다.
+
+r07 완료: claude-opus-5-5, Read/Grep/Glob만 사용, 정상 19턴, issue. 사례별 AI 요청과 결과, 도구명·개발 계획을 보완하고 GitHub 링크를 배포 소스의 불변 커밋으로 변경하였다. 반영 대상 386d79fc298df976bd62cea416ca42a99965dc00을 r08에서 재검토한다.
