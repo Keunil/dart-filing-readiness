@@ -108,7 +108,7 @@
 <tr><td>9주차<br>웹 앱에서 DB의 역할 §1·§2·§10</td><td>저장 필요를 먼저 판단했다. 이번 앱은 문서 1회 점검이 목적이므로 메모리만 사용한다. localStorage나 DB에 고객 문서를 남기지 않는다. 새로고침하면 결과가 사라지는 한계도 함께 설명한다.</td></tr>
 </tbody></table>
 <div class="box"><strong>수업 내용을 적용하며 달라진 점</strong><br>“화면을 만들어 달라”에서 끝내지 않고, 어떤 자료로 무엇을 확인할지 정했다. 특히 가상 감사인 기준을 실제 파일에 적용한 비교와 기준을 지정한 비교를 분리한 것이 이번 검증에서 가장 중요한 판단이었다.</div>
-<p class="source-note">출처: 주차별 로컬 강의안. 상세 파일명·절·SHA-256은 docs/course-alignment.md에 기록했다. 기존 앱의 모든 설계가 처음부터 해당 강의에서 비롯되었다고 소급해 주장하지 않는다.</p><div class="folio"><span>최근일 · 2026505521 · 개발 보고서</span><span>5 / 14</span></div></section>
+<p class="source-note">출처: 주차별 로컬 강의안. 상세 파일명·절·SHA-256은 docs/course-alignment.md에 기록했다. 강의안은 이번 보완 작업에서 앱 구조와 검증 기준을 설명하는 데 참고했다.</p><div class="folio"><span>최근일 · 2026505521 · 개발 보고서</span><span>5 / 14</span></div></section>
 <section class="page">
 <span class="label">MAIN SCREENS</span>
 <h2>5. 시작 화면과 점검 결과</h2>
@@ -164,7 +164,7 @@
 <h3>B. 검토보고서에 연차 기준을 적용하는 과탐</h3>
 <p><span class="case-label">문제 상황</span> 연차와 분·반기 문서에 같은 기준을 적용하면 올바른 검토보고서 표현도 오류가 될 수 있다.</p>
 <p><span class="case-label">AI 활용·해결 과정</span> 최신 원본을 조사한 결과 서식별 분리 구현이 이미 있었다. 이를 재사용하고, 범위 밖·코드 미확인 입력을 임의로 점검하지 않게 구성한다.</p>
-<p><span class="case-label">최종 결과·한계</span> 기존 보호 동작을 보존하는 재사용 결정이다. 이번 과제에서 새로 발견해 원본 규칙을 전면 수정했다고 쓰지 않는다.</p>
+<p><span class="case-label">최종 결과·한계</span> 이번 과제에서는 이미 구현된 서식 구분과 보호 동작을 확인해 재사용했다.</p>
 </article>
 <article class="case">
 <h3>C. 업무 파일이 없는 방문자의 재현 문제</h3>
