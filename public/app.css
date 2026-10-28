@@ -1,7 +1,7 @@
-/* PwC digital tokens and controls reused from the existing design guide and UI. */
+/* Personal coursework prototype: neutral presentation, no corporate branding. */
 :root{
- --brand:#FD5108;--brand-hover:#C52B09;--brand-layer-1:#FFF5ED;--brand-layer-2:#FFE8D4;
- --brand-variant:#FFAA72;--brand-variant-hover:#FE7C39;--on-brand-variant:#1F0606;
+ --brand:#334155;--brand-hover:#0F172A;--brand-layer-1:#F8FAFC;--brand-layer-2:#F1F5F9;
+ --brand-variant:#E2E8F0;--brand-variant-hover:#CBD5E1;--on-brand-variant:#0F172A;
  --bg-base:#FFFFFF;--bg-layer-1:#F5F7F8;--bg-layer-2:#EEEFF1;--bg-disabled:#DFE3E6;
  --border-subtle:#CBD1D6;--border-strong:#8E95A2;--fg-primary:#111113;--fg-secondary:#626771;--fg-disabled:#8E95A2;
  --status-danger:#D12121;--status-danger-bg:#FEF2F2;--status-warning:#E9B01F;--status-warning-bg:#FCFAEA;
@@ -47,3 +47,4 @@ dialog{padding:32px;width:min(960px,calc(100vw - 32px));max-height:90vh;border:0
 @media(max-width:599px){.topbar{padding:12px 16px;gap:12px}.brand{gap:12px;font-size:14px}.brand-logo{width:40px;height:auto}.source-link{font-size:12px}main{padding:32px 16px 20px}h1{letter-spacing:-.5px}.hero{padding-bottom:32px}.hero-copy br{display:none}.benefits{gap:12px}.section-heading{align-items:flex-start;gap:12px}.section-heading h2{font-size:20px;letter-spacing:-.5px}.section-kicker{letter-spacing:0}.local-badge{font-size:12px;max-width:100px;white-space:normal}.input-grid{grid-template-columns:minmax(0,1fr);gap:16px}.dropzone{padding:24px 16px;min-height:240px}.sample-card{padding:24px 16px}.sample-card p br{display:none}.profile-panel{padding:0 12px}.profile-panel summary{flex-wrap:wrap;gap:8px}.profile-edit{margin-left:auto}.profile-fields{grid-template-columns:minmax(0,1fr)}.stat-grid{grid-template-columns:repeat(3,minmax(0,1fr));gap:8px}.stat{padding:12px}.stat strong{font-size:24px}.result-toolbar{gap:12px}.search-field{flex-basis:100%}.filter-label{flex:1}.filter-label select{flex:1}.export-buttons{gap:8px}.export-buttons .button{padding:8px 12px}.list-caption{gap:8px;flex-wrap:wrap}.result-heading{flex-wrap:wrap}.how-steps{display:grid;grid-template-columns:minmax(0,1fr);gap:20px}.how-steps span{margin-top:4px}.how-steps br{display:none}dialog{padding:20px 16px}.dialog-heading{gap:12px}.dialog-heading h2{font-size:20px;letter-spacing:-.5px}#source-view{padding:16px}.source-label{display:block}.source-label>span{display:block;margin-top:4px}}
 @media(pointer:coarse){.button,.text-button,.sample-secondary button,.evidence-button,.finding-location,.close-button,.filter-label select,.profile-fields input,.search-field{min-height:48px}.review-check{width:24px;height:24px}}
 @media(prefers-reduced-motion:reduce){*{transition:none!important;scroll-behavior:auto!important}}
+.personal-notice{max-width:85ch;padding:16px;border:1px solid var(--border-strong);background:var(--bg-layer-1);font-size:14px;line-height:1.8;margin:20px 0}.data-scope{font-size:12px;line-height:1.8;color:var(--fg-secondary);margin:0 0 24px;max-width:100ch}

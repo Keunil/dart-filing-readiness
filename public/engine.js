@@ -14,11 +14,11 @@ function validProfile(value) {
   for (const key of ['name', 'cik', 'address', 'ceo']) {
     const text = value[key];
     if (typeof text !== 'string' || !text.trim() || text.length > 200 || /[\u0000-\u001f\u007f]/.test(text)) {
-      throw new Error('감사인 이름·고유번호·주소·대표자를 올바르게 입력하세요.');
+      throw new Error('감사인 이름·식별값·주소·대표자를 올바르게 입력하세요.');
     }
     profile[key] = text.trim();
   }
-  if (!/^\d{8}$/.test(profile.cik)) throw new Error('감사인 고유번호는 숫자 8자리여야 합니다.');
+  if (!/^\d{8}$/.test(profile.cik)) throw new Error('감사인 식별값는 숫자 8자리여야 합니다.');
   return profile;
 }
 

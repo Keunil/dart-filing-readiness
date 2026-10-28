@@ -7,7 +7,7 @@ test('CSV neutralizes spreadsheet formulas and preserves the failed verdict afte
   const text = csvText(results, new Set([7]));
   assert.ok(text.startsWith('\uFEFF'));
   assert.ok(text.includes('"\'=HYPERLINK(""https://invalid.example"")"'));
-  assert.equal(exportRows(results, new Set([7]))[0][3], '오류');
+  assert.equal(exportRows(results, new Set([7]))[0][3], '오류 후보');
   assert.equal(exportRows(results, new Set([7]))[0][4], '확인함 (자동 판정 유지)');
 });
 test('XLSX is a real ZIP workbook, escapes XML, uses text cells and preserves evidence', async () => {

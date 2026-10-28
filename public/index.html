@@ -7,14 +7,13 @@
   <meta name="referrer" content="no-referrer">
   <meta http-equiv="Content-Security-Policy" content="default-src 'self'; connect-src 'none'; script-src 'self'; style-src 'self' 'unsafe-inline'; img-src 'self' blob: data:; object-src 'none'; base-uri 'none'; form-action 'none'">
   <title>DART Filing Readiness | 제출 전 구조 점검</title>
-  <link rel="icon" href="./assets/favicon.ico" sizes="32x32">
   <link rel="stylesheet" href="./app.css">
   <script type="module" src="./app.js"></script>
 </head>
 <body>
   <a class="skip-link" href="#main">본문으로 이동</a>
   <header class="topbar">
-    <a href="./" class="brand" aria-label="DART Filing Readiness 처음 화면"><img class="brand-logo" src="./assets/pwc-logo.svg" alt="PwC" width="46" height="32"><span>DART <strong>Filing Readiness</strong></span></a>
+    <a href="./" class="brand" aria-label="DART Filing Readiness 처음 화면"><span>DART <strong>Filing Readiness</strong></span></a>
     <span class="project-tag">최근일 · 2026505521 · AI 코딩 과제</span>
     <a class="source-link" href="https://github.com/Keunil/dart-filing-readiness" target="_blank" rel="noopener noreferrer">GitHub ↗</a>
   </header>
@@ -22,17 +21,18 @@
     <aside class="sidebar" aria-label="점검 순서">
       <div class="sidebar-label">YOUR REVIEW WORKFLOW</div>
       <ol class="steps"><li class="active" id="step-file"><span>01</span><div>파일 선택<small>DSD 또는 체험 샘플</small></div></li><li id="step-check"><span>02</span><div>구조 점검<small>서식별 규칙 적용</small></div></li><li id="step-review"><span>03</span><div>확인 및 내보내기<small>근거 확인 · 수동 검토</small></div></li></ol>
-      <div class="privacy"><span class="privacy-icon" aria-hidden="true">↳</span><strong>파일은 내 브라우저에</strong><p>선택한 DSD와 점검 결과는 서버로 전송하거나 저장하지 않습니다.</p><small>새로고침하거나 비우면 사라집니다.</small></div>
+      <div class="privacy"><span class="privacy-icon" aria-hidden="true">↳</span><strong>파일은 내 브라우저에</strong><p>점검 과정에서 앱 코드가 DSD를 별도 업로드하거나 localStorage에 저장하지 않도록 구현했습니다.</p><small>호스팅 접속 로그와 내려받은 파일은 이 설명의 범위 밖입니다.</small></div>
       <div class="scope-note"><strong>지원 서식</strong><p>감사·연결감사보고서<br>분·반기 (연결)검토보고서</p><small>00760 · 00761<br>90020 · 90220 · 90320 · 90420</small></div>
-      <p class="sidebar-bottom">과제 2 · Vibe Coding<br>삼일회계법인 Assurance · 최근일</p>
+      <p class="sidebar-bottom">과제 2 · Vibe Coding<br>최근일 · 개인 과제</p>
     </aside>
     <main id="main">
       <section class="hero" id="intro">
         <div class="eyebrow"><span></span> 접수 전, 구조부터.</div>
         <h1>DART 제출 전<br><em>한 번 더</em> 확인하세요.</h1>
-        <p class="hero-copy">공시팀의 반복 점검을 돕는 회계사의 업무 도구.<br>감사·검토보고서의 오류 후보와 원문 근거를 한곳에서 확인합니다.</p>
-        <div class="benefits"><span>✓ 서식에 맞는 점검</span><span>✓ 원문 위치 확인</span><span>✓ 검토 결과 다운로드</span></div>
+        <p class="hero-copy">반복적인 문서 점검에서 착안한 개인 과제용 프로토타입.<br>감사·검토보고서의 오류 후보와 원문 근거를 한곳에서 확인합니다.</p>
+        <p class="personal-notice">본 앱은 과제 수행을 위한 개인 프로토타입이며, 삼일회계법인 또는 PwC의 공식 서비스·업무도구가 아니고 회사의 검토·승인을 받은 제품이 아닙니다.</p><div class="benefits"><span>✓ 서식에 맞는 점검</span><span>✓ 원문 위치 확인</span><span>✓ 검토 결과 다운로드</span></div>
       </section>
+      <p class="data-scope">공개된 앱 코드의 파일 처리 경로에 대한 설명입니다. 독립 보안감사나 호스팅 접속 로그 처리를 확인한 것은 아닙니다. 실제 고객 문서는 승인된 환경과 정책을 확인한 뒤에만 입력을 고려하세요.</p>
       <section class="input-section" aria-labelledby="input-title">
         <div class="section-heading"><div><span class="section-kicker">START A CHECK</span><h2 id="input-title">점검할 문서를 선택하세요</h2></div><span class="local-badge"><span></span> 브라우저 내 처리</span></div>
         <div class="input-grid">
@@ -48,8 +48,8 @@
           </div>
         </div>
         <details class="profile-panel" id="profile-panel"><summary><span>적용할 감사인 프로필</span><strong id="profile-label">가상회계법인 · 체험용</strong><span class="profile-edit">변경 ⌄</span></summary>
-          <p>실제 파일을 점검할 때 감사인 정보를 직접 입력하세요. 파일의 값을 자동으로 정답으로 삼지 않습니다. 체험 샘플은 기본 프로필을 사용합니다.</p>
-          <div class="profile-fields"><label>감사인 명칭<input id="auditor-name" maxlength="100" autocomplete="off"></label><label>감사인 고유번호 (8자리)<input id="auditor-cik" inputmode="numeric" maxlength="8" autocomplete="off"></label><label>주소<input id="auditor-address" maxlength="200" autocomplete="off"></label><label>대표자<input id="auditor-ceo" maxlength="100" autocomplete="off"></label></div>
+          <p>실제 파일을 점검할 때 감사인 정보를 직접 입력하세요. 식별값은 DSD의 AUDIT_CIK 필드와 비교하며, 미국 SEC CIK나 OpenDART corp_code와 같다고 보증하지 않습니다. 파일의 값을 자동으로 정답으로 삼지 않습니다. 체험 샘플은 기본 프로필을 사용합니다.</p>
+          <div class="profile-fields"><label>감사인 명칭<input id="auditor-name" maxlength="100" autocomplete="off"></label><label>감사인 식별값 (8자리)<input id="auditor-cik" inputmode="numeric" maxlength="8" autocomplete="off"></label><label>주소<input id="auditor-address" maxlength="200" autocomplete="off"></label><label>대표자<input id="auditor-ceo" maxlength="100" autocomplete="off"></label></div>
           <button id="rerun" class="button secondary" disabled>현재 문서 다시 점검</button>
         </details>
       </section>
@@ -59,8 +59,8 @@
         <div id="scope-banner" class="scope-banner"></div>
         <div id="result-content">
           <div class="stat-grid" id="stats"></div>
-          <div class="review-notice"><strong>자동 점검은 제출 승인이 아닙니다.</strong><span>‘수동 확인’과 자동 항목의 확인 사항을 원문에서 검토하세요. 확인 체크를 해도 자동 점검 판정은 유지됩니다.</span></div>
-          <div class="result-toolbar"><label class="search-field"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="항목이나 근거 검색" aria-label="점검 항목 검색"></label><label class="filter-label">상태<select id="status-filter"><option value="all">전체 상태</option><option value="fail">오류</option><option value="warn">확인 필요</option><option value="manual">수동 확인</option><option value="pass">통과</option><option value="na">해당 없음</option></select></label><div class="export-buttons"><button id="export-csv" class="button secondary">CSV ↓</button><button id="export-xlsx" class="button secondary">Excel ↓</button></div></div>
+          <div class="review-notice"><strong>오류 후보는 규칙 불일치 표시이며 실제 결함 확정이나 제출 승인이 아닙니다.</strong><span>‘수동 확인’과 자동 항목의 확인 사항을 원문에서 검토하세요. 확인 체크를 해도 자동 점검 판정은 유지됩니다.</span></div>
+          <div class="result-toolbar"><label class="search-field"><span aria-hidden="true">⌕</span><input id="search" type="search" placeholder="항목이나 근거 검색" aria-label="점검 항목 검색"></label><label class="filter-label">상태<select id="status-filter"><option value="all">전체 상태</option><option value="fail">오류 후보</option><option value="warn">확인 필요</option><option value="manual">수동 확인</option><option value="pass">통과</option><option value="na">해당 없음</option></select></label><div class="export-buttons"><button id="export-csv" class="button secondary">CSV ↓</button><button id="export-xlsx" class="button secondary">Excel ↓</button></div></div>
           <div class="list-caption"><span id="list-count"></span><span id="manual-count"></span></div>
           <div class="table-wrap"><table class="results-table"><thead><tr><th scope="col">번호</th><th scope="col">점검 항목</th><th scope="col">판정</th><th scope="col">근거</th><th scope="col">직접 확인</th></tr></thead><tbody id="result-rows"></tbody></table><p id="empty-results" hidden>조건에 맞는 항목이 없습니다. 검색어와 상태를 바꿔 보세요.</p></div>
         </div>

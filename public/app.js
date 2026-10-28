@@ -4,7 +4,7 @@ import { renderDsd } from './core/dsd-view.js';
 import { csvText, xlsxBytes } from './export.js';
 
 const $ = id => document.getElementById(id);
-const STATUS = { fail: '오류', warn: '확인 필요', manual: '수동 확인', pass: '통과', na: '해당 없음' };
+const STATUS = { fail: '오류 후보', warn: '확인 필요', manual: '수동 확인', pass: '통과', na: '해당 없음' };
 const state = { current: null, source: null, checked: new Set(), images: [], view: null, operation: 0, busy: false };
 const profileKeys = ['name', 'cik', 'address', 'ceo'];
 const node = (tag, text, cls) => {

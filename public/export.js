@@ -1,7 +1,7 @@
 import { writeZip } from './core/dsd-xlsx.js';
 
 export const COLUMNS = ['번호', '구분', '점검 항목', '자동 판정', '직접 확인', '근거', '수동 확인 사항'];
-const STATUS = { fail: '오류', warn: '확인 필요', manual: '수동 확인', pass: '통과', na: '해당 없음' };
+const STATUS = { fail: '오류 후보', warn: '확인 필요', manual: '수동 확인', pass: '통과', na: '해당 없음' };
 export function exportRows(results, checked = new Set()) {
   return results.map(r => [r.no, r.group, r.item, STATUS[r.status], checked.has(r.no) ? '확인함 (자동 판정 유지)' : '미확인',
     r.findings.map(f => f.text + (Number.isInteger(f.block) ? ' [원문 블록 ' + (f.block + 1) + ']' : '')).join('\n'), r.manualPart || '']);

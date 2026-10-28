@@ -37,7 +37,7 @@ export const GROUPS = ['서식버전', '서식오류점검 기능', '전체 텍�
   '독립된 감사인의 감사보고서(본문)', '독립된 감사인의 검토보고서(본문)', '회사의 (첨부)재무제표의 표지', '회사의 (첨부)재무제표', '주석', '내부회계관리제도 감사 또는 검토의견',
   '(1) 독립된 감사인의 내부회계관리제도 감사보고서', '(2) 독립된 감사인의 내부회계관리제도 검토보고서', '회사의 내부회계관리제도 운영실태보고서', '외부감사 실시내용'];
 
-export const STATUS_TEXT = { pass: '통과', fail: '오류', warn: '확인 필요', na: '해당 없음', manual: '수동 확인' };
+export const STATUS_TEXT = { pass: '통과', fail: '오류 후보', warn: '확인 필요', na: '해당 없음', manual: '수동 확인' };
 
 /** 헤더 선택지(00760@6_0.dss <REF-UNIT>). 감사의견(SUPV_OPIN 12자리)은 앞 두 자리가 의견 종류. */
 export const HEADER_CODES = {
@@ -50,7 +50,7 @@ const LISTED = ['P', 'A', 'X'];
 
 /** [문서 헤더정보] 칸 — 편집기 대화상자 순서(기본 정보, 추가 정보 = 00760@6_0.dss <HEADER>). 오류 근거의 head가 이 코드다. */
 export const HEADER_FIELDS = [
-  ['DOC', '문서명'], ['FORM', '서식버전'], ['COMPANY', '회사명'], ['REGCIK', '회사 고유번호'], ['AUDIT_CIK', '감사인 고유번호'],
+  ['DOC', '문서명'], ['FORM', '서식버전'], ['COMPANY', '회사명'], ['REGCIK', '회사 고유번호'], ['AUDIT_CIK', '감사인 식별값'],
   ['FIN_STAT', '작성(검사)하지 않는 서식'], ['CRP_RGS_NO', '감사대상회사의 법인등록번호'], ['TOT_ASSETS', '자산총계(단위: 백만원)'],
   ['TOT_DEBTS', '부채총계(단위: 백만원)'], ['TOT_SALES', '매출액총계(단위: 백만원)'], ['TOT_EMPL', '종업원 수'], ['GMSH_DATE', '정기주주총회일자'],
   ['SUPV_OPIN', '감사의견의 종류 및 내용'], ['ETC_OTHR_YN', '기타사항의 유무'], ['POW_OTHR_YN', '강조사항의 유무'], ['ACC_PROF_YN', '회계변경의 유무'],
@@ -1094,10 +1094,10 @@ export const RULES = [
       return out;
     } },
   { no: 4, group: '헤더정보', item: '기본정보', kind: 'auto',
-    get desc() { return `회사 고유번호와 감사인 고유번호(${AUDITOR.cik})`; },
+    get desc() { return `회사 고유번호와 감사인 식별값(${AUDITOR.cik})`; },
     check(doc) {
       const s = doc.header.summary, out = [];
-      out.push(onHead(s.AUDIT_CIK === AUDITOR.cik ? ok(`감사인 고유번호 ${s.AUDIT_CIK}`) : bad(`감사인 고유번호가 '${s.AUDIT_CIK || '빈칸'}'입니다. ${AUDITOR.cik}로 입력해야 합니다.`, null, s.AUDIT_CIK), 'AUDIT_CIK'));
+      out.push(onHead(s.AUDIT_CIK === AUDITOR.cik ? ok(`감사인 식별값 ${s.AUDIT_CIK}`) : bad(`감사인 식별값가 '${s.AUDIT_CIK || '빈칸'}'입니다. ${AUDITOR.cik}로 입력해야 합니다.`, null, s.AUDIT_CIK), 'AUDIT_CIK'));
       const cik = doc.header.regcik || doc.meta.regcik;
       if (!/^\d{8}$/.test(cik || '')) out.push(onHead(bad(`회사 고유번호가 '${cik || '빈칸'}'입니다.`), 'REGCIK'));
       else out.push(onHead(ok(`회사 고유번호 ${cik} (${doc.header.company || doc.meta.regname})`), 'REGCIK'));
