@@ -1,0 +1,40 @@
+/* DSD document styles ported from robotic_web/web/checklist.css.
+   Keep document typography separate from the application's UI tables. */
+#source-view .dv-page {
+  width: max-content;
+  max-width: none;
+  color: #000;
+  font-family: "Batang", "바탕", serif;
+  font-size: 14.4px;
+  line-height: 1.6;
+  word-break: break-all;
+}
+#source-view .dv-sheet { width: 600px; max-width: none; }
+#source-view .dv-p { margin: 0; white-space: pre-wrap; text-align: justify; }
+#source-view .dv-title { margin: 6px 0; font-weight: 700; white-space: pre-wrap; }
+#source-view .dv-title.is-cover-title { font-size: 28px; text-align: center; }
+#source-view .dv-title.is-section-1,
+#source-view .dv-title.is-toc { font-size: 18px; text-align: center; }
+#source-view .dv-table {
+  margin: 0 0 6px;
+  border-collapse: collapse;
+  table-layout: fixed;
+  font-family: "Gulim", "굴림", sans-serif;
+  font-size: 12px;
+}
+#source-view .dv-table td,
+#source-view .dv-table th {
+  padding: 2px 4px;
+  line-height: 18px;
+  white-space: pre-wrap;
+  font-weight: normal;
+  overflow-wrap: anywhere;
+}
+#source-view .dv-table.has-border td,
+#source-view .dv-table.has-border th { border: 1px solid var(--border-strong); }
+#source-view .dv-table th { background: var(--bg-disabled); }
+#source-view .dv-table .dv-p { text-align: inherit; }
+#source-view .dv-pgbrk { margin: 18px 0; border: 0; border-top: 1px dashed var(--border-subtle); }
+#source-view .dv-image { width: fit-content; max-width: 100%; margin: 8px 0; }
+#source-view .dv-image img { display: block; max-width: min(600px, 100%); height: auto; border: 1px solid var(--border-subtle); }
+#source-view .dv-image.is-missing { padding: 24px; border: 1px dashed var(--border-subtle); font: 14px var(--font-sans); text-align: center; }

@@ -44,3 +44,7 @@
 ## 2026-10-28 21시대 제출본 정리
 
 가상 DSD 생성기는 public/samples.js에서 tests/fixtures/samples.mjs로 옮기고 홈페이지의 샘플 버튼·호출을 제거했다. app.js는 기존 검증에 사용한 감사인 기준을 편집 가능한 초기값으로 지정한다. 점검 조건과 판정 로직은 변경하지 않았다. 사용자 요청에 따라 로고 없이 PwC 색상·화면 스타일을 적용했다. 첨부 원본 ZIP의 28건을 메모리에서 읽어 최신 소스로 두 차례 실행한 항목별 상태와 기존 집계의 일치를 확인했다.
+
+## 2026-10-28 DSD 원문 표시 수정
+
+robotic_web 체크아웃 e4001fa46a0c487742e298fe9a88bc1193005065의 web/dsd-view.js와 web/checklist.css를 대조하였다. 렌더러 동작은 같지만 원문 전용 .dv-* 스타일이 독립 앱에서 빠져 있었다. public/dsd-view.css에 문단·제목·표·쪽 구분·그림 스타일을 옮기고 public/app.css의 width:auto!important와 일반 셀 스타일을 제거하였다. 앱 색상 변수에 맞춰 연결했으며 모바일에서도 표 원래 폭을 유지하고 원문 패널 안에서 가로 스크롤한다. 점검 엔진과 제출한 Word/PDF·캡처는 변경하지 않았다. submission/manifest.json은 제출 시점의 스냅숏이다.
