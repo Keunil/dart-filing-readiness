@@ -1,7 +1,7 @@
 import { test } from 'node:test';
 import assert from 'node:assert/strict';
 import { analyzeDsd, DEFAULT_PROFILE } from '../public/engine.js';
-import { sampleDsd } from '../public/samples.js';
+import { sampleDsd } from './fixtures/samples.mjs';
 import { readZip, entryBytes, writeZip } from '../public/core/dsd-xlsx.js';
 
 const at = (analysis, no) => analysis.result.results.find(rule => rule.no === no);

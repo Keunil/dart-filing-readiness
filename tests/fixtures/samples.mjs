@@ -1,5 +1,5 @@
 // Public synthetic DSD fixtures. Every company, person, amount and event is fictional.
-import { writeZip } from './core/dsd-xlsx.js';
+import { writeZip } from '../../public/core/dsd-xlsx.js';
 const META = '<METAINFO><GENERATOR schema="dart4.xsd" editver="5.115"/><DOCUMENT-HEADER regcik="00111111" regname="주식회사 가상테크"/><DOCUMENT-INFO docver="6.0" bsn-id="00760" rpt-id="00760" doc-id="00760" iscorrection="N"/></METAINFO>';
 const SUMMARY = {
   AUDIT_CIK: '00999999', SUPV_OPIN: '100000000000', GMSH_DATE: '20260320', CRP_RGS_NO: '1101113471036', FIN_STAT: '000',

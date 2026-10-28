@@ -13,3 +13,5 @@ docs/agent-review/_legacy-*
 /dist/
 /.vercel/
 /node_modules/
+
+/submission/private/

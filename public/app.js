@@ -1,5 +1,4 @@
-import { DEFAULT_PROFILE, analyzeDsd } from './engine.js';
-import { sampleDsd } from './samples.js';
+import { analyzeDsd } from './engine.js';
 import { renderDsd } from './core/dsd-view.js';
 import { csvText, xlsxBytes } from './export.js';
 
@@ -22,7 +21,7 @@ function profile() {
 }
 function updateProfileLabel() {
   const p = profile();
-  $('profile-label').textContent = (p.name || '감사인 명칭을 입력하세요') + (p.name === DEFAULT_PROFILE.name ? ' · 체험용' : '');
+  $('profile-label').textContent = (p.name || '감사인 명칭을 입력하세요');
 }
 function notify(text, error = false) {
   $('message').textContent = text;
@@ -31,7 +30,7 @@ function notify(text, error = false) {
 }
 function setBusy(busy) {
   state.busy = busy;
-  for (const id of ['sample-issues', 'sample-fixed', 'sample-interim', 'sample-download', 'file-input', 'clear', 'export-csv', 'export-xlsx']) $(id).disabled = busy;
+  for (const id of ['file-input', 'clear', 'export-csv', 'export-xlsx']) $(id).disabled = busy;
   $('rerun').disabled = busy || !state.source;
   $('dropzone').setAttribute('aria-busy', String(busy));
 }
@@ -64,7 +63,7 @@ function clearDocument() {
   setBusy(false);
   notify('문서와 점검 결과를 비웠습니다.');
 }
-async function run(sourceFactory, isSample = false) {
+async function run(sourceFactory) {
   if (state.busy) return;
   const op = ++state.operation;
   setBusy(true);
@@ -77,7 +76,6 @@ async function run(sourceFactory, isSample = false) {
   notify('문서를 읽고 구조를 점검하고 있습니다.');
   $('step-check').classList.add('active');
   try {
-    if (isSample) setProfile(DEFAULT_PROFILE);
     const selectedProfile = profile();
     const source = await sourceFactory();
     const report = await analyzeDsd(source.bytes, source.name, selectedProfile);
@@ -230,14 +228,7 @@ function download(bytes, type, name) {
   setTimeout(() => URL.revokeObjectURL(url), 5000);
 }
 for (const key of profileKeys) $('auditor-' + key).addEventListener('input', updateProfileLabel);
-setProfile(DEFAULT_PROFILE);
-$('sample-issues').addEventListener('click', () => run(() => sampleDsd('annual-issues'), true));
-$('sample-fixed').addEventListener('click', () => run(() => sampleDsd('annual-fixed'), true));
-$('sample-interim').addEventListener('click', () => run(() => sampleDsd('interim-issues'), true));
-$('sample-download').addEventListener('click', async () => {
-  try { const sample = await sampleDsd('annual-issues'); download(sample.bytes, 'application/zip', sample.name); }
-  catch (error) { notify(error.message, true); }
-});
+setProfile({"name": "삼일회계법인", "cik": "00260295", "address": "서울특별시 용산구 한강대로 100", "ceo": "윤훈수"});
 function selectFile(file) {
   if (!file || state.busy) return;
   run(async () => ({ name: file.name, bytes: new Uint8Array(await file.arrayBuffer()) }));
