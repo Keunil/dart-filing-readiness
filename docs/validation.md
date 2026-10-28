@@ -107,3 +107,6 @@ Codex in-app browser에서 로컬 HTTP 앱을 열고 실제 화면 조작으로 
 - Sites 버전3, 소스 b5dd2c53b821e756438bc4182cf57fed25b013b0. 배포 appgdep_6ae1dcf2b070819182f70ae3949b4bcd가 20:31 KST succeeded를 반환했다.
 - 새 공개 주소: https://dart-filing-readiness-keunil.rmsdlf0330.chatgpt.site
 - 최신 Word를 Word에서 직접 PDF로 출력했다. 14쪽, 이미지4개, 클릭 가능한 하이퍼링크7개. 파일에 원본DSD·프로필값·회사 파일명은 포함하지 않았다.
+
+- 최종 문구 교정 배포: Sites 버전4, 소스47e869177ae2ce8b96cbefcfd6a9d6286d838795, 배포appgdep_6ae1defada8881918405f7f605e2c3b4, 20:39 KST succeeded. 수정은 식별값이/식별값은 조사와 보고서 문장 정리이며 판정 로직 변화 없음.
+- 버전4 공개 확인: HTTP200, 식별값3자리 입력 시 “감사인 식별값은 숫자 8자리여야 합니다.” 안내, 가상 체험 재실행58행 복구. Codex 브라우저 자동화 결과.
