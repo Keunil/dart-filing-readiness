@@ -3,7 +3,7 @@
 원본 저장소: Keunil/robotic_web (로컬 Git 원격 확인). 기준 커밋: `0d4d1c6a2753c1c5e5499495dcd5fb67a152605e`.
 아래 원본 SHA-256은 `git show <기준 커밋>:web/<파일>`의 바이트를 기준으로 계산했다. 새 파일은 UTF-8/LF다.
 
-| 모듈 | 원본 SHA-256 | 제출본 SHA-256 |
+| 모듈 | 원본 SHA-256 | 최초 분리본 SHA-256 |
 |---|---|---|
 | `dsd-read.js` | `28efe2b6195890d4d79e59893c26ac855fafab6ca8ad2e7101215a1d456ac5f4` | `78b801fc92b92ac3111b1f75f7903928abe9547debd35c243832745205ae0a6f` |
 | `dsd-view.js` | `ab50c07be45fb1446a52a0049f50487b625a588ca35e82744148cb1cee23a173` | `ef1adcb118c6386bb51a0d6011113f5c1e4893c95f05d455d2ab1276dcda37c1` |
@@ -38,3 +38,5 @@
 ## 2026-10-28 리뷰 피드백 반영
 
 기존 로고·favicon의 사용을 중단하고 public/에서 제거했다. 중립 회색 UI와 개인 과제 안내를 적용했다. engine.js와 checklist-rules.js의 사용자 표시 문자열에서 감사인 고유번호를 식별값으로 바꿨다. fail의 표시명은 오류 후보로 바꿨고 CSV/XLSX도 동일하다. AUDIT_CIK 등 XML 필드명, 프로필의 cik 키, 규칙 ID·조건·개수·판정 로직은 변경하지 않았다. 이 설명 변경이 기존 28건의 판정 개수를 개선했다고 주장하지 않는다.
+
+위 모듈 해시 표는 최초 분리 시점의 기록이다. 리뷰 후 최신 파일 해시는 submission/manifest.json을 기준으로 확인한다.

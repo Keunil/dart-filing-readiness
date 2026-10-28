@@ -37,7 +37,9 @@ def fill(p,e):
    elif child.tag=='a' and child.get('href','').startswith('https://'):
     link=OxmlElement('w:hyperlink');link.set(qn('r:id'),p.part.relate_to(child.get('href'),RT.HYPERLINK,is_external=True))
     r=OxmlElement('w:r');pr=OxmlElement('w:rPr');color=OxmlElement('w:color');color.set(qn('w:val'),'000000');pr.append(color);u=OxmlElement('w:u');u.set(qn('w:val'),'single');pr.append(u);r.append(pr);text=OxmlElement('w:t');text.text=txt(child);r.append(text);link.append(r);p._p.append(link)
-   else:visit(child,bold or child.tag in ['b','strong'])
+   else:
+    visit(child,bold or child.tag in ['b','strong'])
+    if child.tag=='b' and node.tag=='div':p.add_run(': ')
    if child.tail:p.add_run(re.sub(r'\s+',' ',child.tail))
  visit(e)
  for run in p.runs:
