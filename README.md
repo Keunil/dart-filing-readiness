@@ -52,7 +52,7 @@ python -m http.server 8765 --directory public
 node --test tests/*.test.mjs
 ```
 
-실제 실행 결과: Node 테스트 11/11 통과, 실패 0, 건너뜀 0. CSV의 수식 접두 문자 보호와 XLSX 문자열 셀 확인을 포함합니다. Agent의 브라우저 시험에서 합성 DSD 점검·CSV/XLSX 다운로드·수동 확인 후 자동 판정 유지·근거 창 닫기 버튼 노출을 확인했습니다. 사용자의 직접 UAT와 실제 업무 자료의 대량 검증은 미실행입니다.
+실제 실행 결과: Node 테스트 11/11 통과, 실패 0, 건너뜀 0. CSV의 수식 접두 문자 보호와 XLSX 문자열 셀 확인을 포함합니다. Agent의 브라우저 시험에서 합성 DSD 점검·CSV/XLSX 다운로드·수동 확인 후 자동 판정 유지·근거 창 닫기 버튼 노출을 확인했습니다. 추가로 실제 오류 DSD 28건의 읽기·점검을 완료하고 연속 두 실행의 판정 일치를 확인했습니다. 담당자 정답 대조와 사용자의 직접 UAT는 미실행입니다.
 
 ## 배포
 
@@ -67,3 +67,11 @@ node --test tests/*.test.mjs
 ## 해석 범위
 
 점검 결과는 제출 전 검토를 돕는 정보입니다. 자동 통과와 담당자의 수동 확인은 별개이며, 점검 결과만으로 보고서의 회계적 적정성이나 DART 접수 가능 여부를 확정하지 않습니다. 실제 업무의 시간·오류 감소 효과는 아직 측정하지 않았습니다.
+
+## 2026-10-28 제출 보고서 보완
+
+- 강의안 연결: [docs/course-alignment.md](docs/course-alignment.md).
+- 실제 DSD 28건: [익명 검증 집계](docs/real-dsd-validation.json). 원본은 저장소에 포함하지 않았습니다.
+- 신규 오류 예시는 만들지 않았으며 기존 공개 체험만 유지했습니다.
+- 고객 파일을 복사하지 않고 기존 엔진으로 읽는 실행기: `tools/validate-private-dsd.mjs`.
+- 첨부한 보고서 초안·인계문서와 독립 앱의 범위 차이: [docs/attachment-reconciliation.md](docs/attachment-reconciliation.md).

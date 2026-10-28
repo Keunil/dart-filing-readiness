@@ -1,0 +1,967 @@
+{
+  "date": "2026-10-28",
+  "node": "v24.18.0",
+  "sourceSha256": {
+    "public/engine.js": "dd4125a413bf5b6d665ae5aa986155427b2fd153971bf9afed1ad811e1b5b940",
+    "public/core/checklist-history.js": "36e82b78f20a187a62128fccc110646c414973fa6334bc42b04f6ab674334860",
+    "public/core/checklist-interim.js": "3bc3b332ecfb549a56ede95334a274262e54a52daed09cbd9c403698a3673331",
+    "public/core/checklist-notes.js": "8459b18ef77019b7e4bcd950548989144eed4b6bb28b3fa8a5579f1aa39f7540",
+    "public/core/checklist-rules.js": "f436107d3a2e5c5cfbdb0c6fedae247730988e25dbc485529b3e0ab6e2bf2e61",
+    "public/core/dsd-read.js": "79fd3a345ff48a5171b0185e5879708e1a300a46450770da53b13f2d4ea3fa7b",
+    "public/core/dsd-view.js": "43446e0dd39916922e9a1fc99a2647d2770a391ba45475ad1cc10cb071848a14",
+    "public/core/dsd-xlsx.js": "fe635b4ff96620a91060f2d87d1e065ca30294928f35a3df512ad077ae86104a"
+  },
+  "expected": 28,
+  "analyzed": 28,
+  "failed": 0,
+  "unsupported": 0,
+  "totals": {
+    "fail": 92,
+    "warn": 61,
+    "manual": 153,
+    "pass": 888,
+    "na": 430
+  },
+  "rules": [
+    {
+      "no": 1,
+      "item": "최신서식 확인(6.0)",
+      "statuses": {
+        "pass": 28
+      }
+    },
+    {
+      "no": 2,
+      "item": "파일형식 검사(F7)",
+      "statuses": {
+        "manual": 23,
+        "fail": 5
+      }
+    },
+    {
+      "no": 3,
+      "item": "본문/재무제표/주석",
+      "statuses": {
+        "pass": 24,
+        "fail": 4
+      }
+    },
+    {
+      "no": 4,
+      "item": "기본정보",
+      "statuses": {
+        "pass": 28
+      }
+    },
+    {
+      "no": 5,
+      "item": "추가정보: 법인등록번호",
+      "statuses": {
+        "pass": 23,
+        "na": 5
+      }
+    },
+    {
+      "no": 6,
+      "item": "추가정보: 재무정보(백만원 단위)",
+      "statuses": {
+        "pass": 24,
+        "fail": 4
+      }
+    },
+    {
+      "no": 7,
+      "item": "추가정보: 정기총회일 항목",
+      "statuses": {
+        "warn": 5,
+        "pass": 16,
+        "na": 5,
+        "fail": 2
+      }
+    },
+    {
+      "no": 8,
+      "item": "기타사항 및 강조사항 선택항목",
+      "statuses": {
+        "pass": 23,
+        "fail": 5
+      }
+    },
+    {
+      "no": 9,
+      "item": "IFRS 적용유무",
+      "statuses": {
+        "pass": 16,
+        "warn": 7,
+        "manual": 4,
+        "fail": 1
+      }
+    },
+    {
+      "no": 10,
+      "item": "연결재무제표 작성여부",
+      "statuses": {
+        "fail": 1,
+        "pass": 22,
+        "na": 5
+      }
+    },
+    {
+      "no": 11,
+      "item": "감사의견 및 내부회계관리제도 감사 또는 검토의견",
+      "statuses": {
+        "pass": 27,
+        "fail": 1
+      }
+    },
+    {
+      "no": 12,
+      "item": "내부회계관리제도 감사(검토)보고서 첨부여부(Y or N)",
+      "statuses": {
+        "pass": 22,
+        "na": 5,
+        "fail": 1
+      }
+    },
+    {
+      "no": 13,
+      "item": "표지 사업연도",
+      "statuses": {
+        "pass": 25,
+        "fail": 3
+      }
+    },
+    {
+      "no": 14,
+      "item": "표지하단 \"감사인명\" 기재항목",
+      "statuses": {
+        "pass": 26,
+        "fail": 1,
+        "warn": 1
+      }
+    },
+    {
+      "no": 15,
+      "item": "목차 서식 이용여부",
+      "statuses": {
+        "pass": 28
+      }
+    },
+    {
+      "no": 16,
+      "item": "\"독립된 감사인\" 표기",
+      "statuses": {
+        "fail": 2,
+        "pass": 26
+      }
+    },
+    {
+      "no": 17,
+      "item": "주석 표기(재무제표 명칭)",
+      "statuses": {
+        "pass": 25,
+        "fail": 3
+      }
+    },
+    {
+      "no": 18,
+      "item": "감사의견",
+      "statuses": {
+        "pass": 22,
+        "fail": 6
+      }
+    },
+    {
+      "no": 19,
+      "item": "기타사항 및 강조사항",
+      "statuses": {
+        "pass": 28
+      }
+    },
+    {
+      "no": 20,
+      "item": "핵심감사사항",
+      "statuses": {
+        "na": 18,
+        "manual": 8,
+        "warn": 2
+      }
+    },
+    {
+      "no": 21,
+      "item": "(상장법인) 업무수행이사",
+      "statuses": {
+        "na": 18,
+        "pass": 8,
+        "fail": 2
+      }
+    },
+    {
+      "no": 22,
+      "item": "감사인주소 및 대표이사명/보고서일자기재",
+      "statuses": {
+        "pass": 28
+      }
+    },
+    {
+      "no": 23,
+      "item": "유효시점 문구",
+      "statuses": {
+        "pass": 24,
+        "fail": 3,
+        "warn": 1
+      }
+    },
+    {
+      "no": 24,
+      "item": "주소(도로명) 기재/회사 대표이사명",
+      "statuses": {
+        "manual": 14,
+        "pass": 14
+      }
+    },
+    {
+      "no": 25,
+      "item": "사업연도 표기",
+      "statuses": {
+        "pass": 25,
+        "fail": 3
+      }
+    },
+    {
+      "no": 26,
+      "item": "재무제표서식(Click) 필수작성 대상",
+      "statuses": {
+        "pass": 28
+      }
+    },
+    {
+      "no": 27,
+      "item": "사업연도 표기",
+      "statuses": {
+        "pass": 21,
+        "fail": 6,
+        "warn": 1
+      }
+    },
+    {
+      "no": 28,
+      "item": "금액단위 표기",
+      "statuses": {
+        "pass": 28
+      }
+    },
+    {
+      "no": 29,
+      "item": "'별첨 주석은 본 재무제표의 일부입니다.' 문구",
+      "statuses": {
+        "pass": 26,
+        "fail": 2
+      }
+    },
+    {
+      "no": 30,
+      "item": "이익잉여금 처분계산서/결손금처리계산서",
+      "statuses": {
+        "fail": 6,
+        "na": 5,
+        "manual": 12,
+        "warn": 5
+      }
+    },
+    {
+      "no": 31,
+      "item": "재무제표 확정(승인)일과 기관 표기",
+      "statuses": {
+        "pass": 25,
+        "fail": 1,
+        "warn": 2
+      }
+    },
+    {
+      "no": 32,
+      "item": "주석 금액단위 표기오류",
+      "statuses": {
+        "pass": 18,
+        "warn": 8,
+        "fail": 2
+      }
+    },
+    {
+      "no": 33,
+      "item": "삽입 서식 이용여부",
+      "statuses": {
+        "pass": 14,
+        "na": 14
+      }
+    },
+    {
+      "no": 34,
+      "item": "첨부 서한문구",
+      "statuses": {
+        "na": 23,
+        "pass": 4,
+        "fail": 1
+      }
+    },
+    {
+      "no": 35,
+      "item": "내부회계관리제도 감사보고서 표지",
+      "statuses": {
+        "na": 23,
+        "pass": 4,
+        "fail": 1
+      }
+    },
+    {
+      "no": 36,
+      "item": "내부회계관리제도에 대한 감사의견",
+      "statuses": {
+        "na": 23,
+        "pass": 4,
+        "fail": 1
+      }
+    },
+    {
+      "no": 37,
+      "item": "업무수행이사",
+      "statuses": {
+        "na": 23,
+        "pass": 5
+      }
+    },
+    {
+      "no": 38,
+      "item": "감사인주소 및 대표이사명/보고서일자기재",
+      "statuses": {
+        "na": 23,
+        "pass": 5
+      }
+    },
+    {
+      "no": 39,
+      "item": "유효시점 문구",
+      "statuses": {
+        "na": 23,
+        "pass": 4,
+        "warn": 1
+      }
+    },
+    {
+      "no": 40,
+      "item": "첨부 서한문구",
+      "statuses": {
+        "pass": 6,
+        "na": 19,
+        "fail": 3
+      }
+    },
+    {
+      "no": 41,
+      "item": "내부회계관리제도 검토보고서 표지",
+      "statuses": {
+        "pass": 9,
+        "na": 19
+      }
+    },
+    {
+      "no": 42,
+      "item": "검토 보고서 일자",
+      "statuses": {
+        "pass": 9,
+        "na": 19
+      }
+    },
+    {
+      "no": 43,
+      "item": "내부회계관리제도 검토보고서 본문(도입문단)",
+      "statuses": {
+        "pass": 6,
+        "na": 19,
+        "fail": 3
+      }
+    },
+    {
+      "no": 44,
+      "item": "감사인주소 및 대표이사명/보고서일자기재",
+      "statuses": {
+        "pass": 9,
+        "na": 19
+      }
+    },
+    {
+      "no": 45,
+      "item": "유효시점 문구",
+      "statuses": {
+        "fail": 2,
+        "na": 19,
+        "pass": 6,
+        "warn": 1
+      }
+    },
+    {
+      "no": 46,
+      "item": "검토보고서와 회사 운영실태보고서(준거기준·평가기준) 일치여부",
+      "statuses": {
+        "manual": 9,
+        "na": 19
+      }
+    },
+    {
+      "no": 47,
+      "item": "운영실태보고서 내용",
+      "statuses": {
+        "manual": 11,
+        "na": 14,
+        "fail": 3
+      }
+    },
+    {
+      "no": 48,
+      "item": "운영실태보고서의 보고서일자",
+      "statuses": {
+        "manual": 14,
+        "na": 14
+      }
+    },
+    {
+      "no": 49,
+      "item": "운영실태보고서 붙임파일(내부회계 감사대상은 필수)",
+      "statuses": {
+        "na": 23,
+        "manual": 5
+      }
+    },
+    {
+      "no": 50,
+      "item": "1. 감사대상업무",
+      "statuses": {
+        "pass": 28
+      }
+    },
+    {
+      "no": 51,
+      "item": "2. 감사참여자 구분별 인원수 및 감사시간",
+      "statuses": {
+        "manual": 25,
+        "fail": 3
+      }
+    },
+    {
+      "no": 52,
+      "item": "3. 주요 감사실시내용",
+      "statuses": {
+        "pass": 17,
+        "fail": 7,
+        "warn": 4
+      }
+    },
+    {
+      "no": 53,
+      "item": "4. 감사(감사위원회)와의 커뮤니케이션",
+      "statuses": {
+        "pass": 24,
+        "fail": 4
+      }
+    },
+    {
+      "no": 54,
+      "item": "5. 감사인의 중요성 금액",
+      "statuses": {
+        "pass": 28
+      }
+    },
+    {
+      "no": 55,
+      "item": "감사보고서와 연결감사보고서(연결이 있는 경우)",
+      "statuses": {
+        "na": 15,
+        "warn": 13
+      }
+    },
+    {
+      "no": 56,
+      "item": "주석 번호 순서·중복·제목 형식",
+      "statuses": {
+        "pass": 28
+      }
+    },
+    {
+      "no": 57,
+      "item": "핵심·강조·기타사항 주석 참조와 관련 근거",
+      "statuses": {
+        "na": 18,
+        "warn": 10
+      }
+    },
+    {
+      "no": 58,
+      "item": "전기 감사인·감사의견과 기타사항",
+      "statuses": {
+        "manual": 28
+      }
+    }
+  ],
+  "scopeCounts": {
+    "00760": 23,
+    "00761": 5
+  },
+  "casesWithFailure": 26,
+  "repeatComparison": "Two consecutive runs: all 28 input hashes, counts and failed rule IDs identical. Input hashes remain private.",
+  "cases": [
+    {
+      "id": "DSD-01",
+      "code": "00760",
+      "counts": {
+        "fail": 4,
+        "warn": 1,
+        "manual": 7,
+        "pass": 35,
+        "na": 11
+      },
+      "failedRules": [
+        10,
+        16,
+        30,
+        45
+      ]
+    },
+    {
+      "id": "DSD-02",
+      "code": "00760",
+      "counts": {
+        "fail": 2,
+        "warn": 2,
+        "manual": 3,
+        "pass": 30,
+        "na": 21
+      },
+      "failedRules": [
+        3,
+        30
+      ]
+    },
+    {
+      "id": "DSD-03",
+      "code": "00761",
+      "counts": {
+        "fail": 2,
+        "warn": 1,
+        "manual": 4,
+        "pass": 25,
+        "na": 26
+      },
+      "failedRules": [
+        3,
+        17
+      ]
+    },
+    {
+      "id": "DSD-04",
+      "code": "00760",
+      "counts": {
+        "fail": 1,
+        "warn": 2,
+        "manual": 9,
+        "pass": 39,
+        "na": 7
+      },
+      "failedRules": [
+        52
+      ]
+    },
+    {
+      "id": "DSD-05",
+      "code": "00760",
+      "counts": {
+        "fail": 1,
+        "warn": 3,
+        "manual": 3,
+        "pass": 31,
+        "na": 20
+      },
+      "failedRules": [
+        8
+      ]
+    },
+    {
+      "id": "DSD-06",
+      "code": "00761",
+      "counts": {
+        "fail": 4,
+        "warn": 1,
+        "manual": 3,
+        "pass": 25,
+        "na": 25
+      },
+      "failedRules": [
+        3,
+        6,
+        8,
+        31
+      ]
+    },
+    {
+      "id": "DSD-07",
+      "code": "00760",
+      "counts": {
+        "fail": 2,
+        "warn": 3,
+        "manual": 8,
+        "pass": 34,
+        "na": 11
+      },
+      "failedRules": [
+        18,
+        43
+      ]
+    },
+    {
+      "id": "DSD-08",
+      "code": "00760",
+      "counts": {
+        "fail": 5,
+        "warn": 2,
+        "manual": 7,
+        "pass": 36,
+        "na": 8
+      },
+      "failedRules": [
+        27,
+        30,
+        40,
+        43,
+        51
+      ]
+    },
+    {
+      "id": "DSD-09",
+      "code": "00760",
+      "counts": {
+        "fail": 4,
+        "warn": 2,
+        "manual": 8,
+        "pass": 33,
+        "na": 11
+      },
+      "failedRules": [
+        18,
+        25,
+        52,
+        53
+      ]
+    },
+    {
+      "id": "DSD-10",
+      "code": "00760",
+      "counts": {
+        "fail": 2,
+        "warn": 3,
+        "manual": 3,
+        "pass": 29,
+        "na": 21
+      },
+      "failedRules": [
+        17,
+        23
+      ]
+    },
+    {
+      "id": "DSD-11",
+      "code": "00760",
+      "counts": {
+        "fail": 5,
+        "warn": 3,
+        "manual": 6,
+        "pass": 36,
+        "na": 8
+      },
+      "failedRules": [
+        2,
+        13,
+        25,
+        30,
+        40
+      ]
+    },
+    {
+      "id": "DSD-12",
+      "code": "00760",
+      "counts": {
+        "fail": 3,
+        "warn": 3,
+        "manual": 2,
+        "pass": 30,
+        "na": 20
+      },
+      "failedRules": [
+        7,
+        18,
+        51
+      ]
+    },
+    {
+      "id": "DSD-13",
+      "code": "00760",
+      "counts": {
+        "fail": 8,
+        "warn": 3,
+        "manual": 8,
+        "pass": 32,
+        "na": 7
+      },
+      "failedRules": [
+        2,
+        6,
+        7,
+        8,
+        11,
+        12,
+        35,
+        52
+      ]
+    },
+    {
+      "id": "DSD-14",
+      "code": "00761",
+      "counts": {
+        "fail": 5,
+        "warn": 4,
+        "manual": 1,
+        "pass": 26,
+        "na": 22
+      },
+      "failedRules": [
+        2,
+        27,
+        29,
+        51,
+        52
+      ]
+    },
+    {
+      "id": "DSD-15",
+      "code": "00760",
+      "counts": {
+        "fail": 0,
+        "warn": 1,
+        "manual": 8,
+        "pass": 39,
+        "na": 10
+      },
+      "failedRules": []
+    },
+    {
+      "id": "DSD-16",
+      "code": "00760",
+      "counts": {
+        "fail": 2,
+        "warn": 2,
+        "manual": 7,
+        "pass": 36,
+        "na": 11
+      },
+      "failedRules": [
+        27,
+        47
+      ]
+    },
+    {
+      "id": "DSD-17",
+      "code": "00760",
+      "counts": {
+        "fail": 6,
+        "warn": 1,
+        "manual": 7,
+        "pass": 33,
+        "na": 11
+      },
+      "failedRules": [
+        17,
+        18,
+        27,
+        30,
+        43,
+        47
+      ]
+    },
+    {
+      "id": "DSD-18",
+      "code": "00760",
+      "counts": {
+        "fail": 4,
+        "warn": 3,
+        "manual": 9,
+        "pass": 35,
+        "na": 7
+      },
+      "failedRules": [
+        14,
+        16,
+        21,
+        23
+      ]
+    },
+    {
+      "id": "DSD-19",
+      "code": "00761",
+      "counts": {
+        "fail": 1,
+        "warn": 2,
+        "manual": 4,
+        "pass": 29,
+        "na": 22
+      },
+      "failedRules": [
+        21
+      ]
+    },
+    {
+      "id": "DSD-20",
+      "code": "00760",
+      "counts": {
+        "fail": 6,
+        "warn": 4,
+        "manual": 3,
+        "pass": 24,
+        "na": 21
+      },
+      "failedRules": [
+        8,
+        13,
+        18,
+        29,
+        30,
+        53
+      ]
+    },
+    {
+      "id": "DSD-21",
+      "code": "00760",
+      "counts": {
+        "fail": 3,
+        "warn": 1,
+        "manual": 4,
+        "pass": 29,
+        "na": 21
+      },
+      "failedRules": [
+        18,
+        27,
+        52
+      ]
+    },
+    {
+      "id": "DSD-22",
+      "code": "00760",
+      "counts": {
+        "fail": 1,
+        "warn": 2,
+        "manual": 4,
+        "pass": 31,
+        "na": 20
+      },
+      "failedRules": [
+        32
+      ]
+    },
+    {
+      "id": "DSD-23",
+      "code": "00760",
+      "counts": {
+        "fail": 3,
+        "warn": 0,
+        "manual": 5,
+        "pass": 29,
+        "na": 21
+      },
+      "failedRules": [
+        6,
+        23,
+        32
+      ]
+    },
+    {
+      "id": "DSD-24",
+      "code": "00761",
+      "counts": {
+        "fail": 4,
+        "warn": 3,
+        "manual": 3,
+        "pass": 26,
+        "na": 22
+      },
+      "failedRules": [
+        2,
+        9,
+        52,
+        53
+      ]
+    },
+    {
+      "id": "DSD-25",
+      "code": "00760",
+      "counts": {
+        "fail": 8,
+        "warn": 3,
+        "manual": 8,
+        "pass": 32,
+        "na": 7
+      },
+      "failedRules": [
+        2,
+        8,
+        13,
+        25,
+        34,
+        36,
+        52,
+        53
+      ]
+    },
+    {
+      "id": "DSD-26",
+      "code": "00760",
+      "counts": {
+        "fail": 2,
+        "warn": 4,
+        "manual": 8,
+        "pass": 37,
+        "na": 7
+      },
+      "failedRules": [
+        6,
+        27
+      ]
+    },
+    {
+      "id": "DSD-27",
+      "code": "00760",
+      "counts": {
+        "fail": 4,
+        "warn": 0,
+        "manual": 7,
+        "pass": 36,
+        "na": 11
+      },
+      "failedRules": [
+        3,
+        40,
+        45,
+        47
+      ]
+    },
+    {
+      "id": "DSD-28",
+      "code": "00760",
+      "counts": {
+        "fail": 0,
+        "warn": 2,
+        "manual": 4,
+        "pass": 31,
+        "na": 21
+      },
+      "failedRules": []
+    }
+  ]
+}

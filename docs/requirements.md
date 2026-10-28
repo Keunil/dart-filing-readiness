@@ -19,8 +19,8 @@ R&Q 공시팀은 DART 접수 전 감사·검토보고서의 구조를 체크리�
 | 웹 애플리케이션 URL | https://dart-filing-readiness-keunil.tasty-note-8705.chatgpt.site | 로그인 없이 접속 후 핵심 기능 확인 |
 | GitHub Repository URL | https://github.com/Keunil/dart-filing-readiness | 저장소와 소스 열람 |
 | 앱 소개 | 목적·대상·주요 기능 | 보고서 1~2절 |
-| 주요 화면 캡처 | 시작·점검 결과·원문 근거·모바일 | screenshots/와 보고서 4~5절 |
-| 문제 상황·AI 활용·해결 과정·최종 결과 | 사례마다 네 요소를 구분 | ai-collaboration.md와 보고서 6~7절 |
+| 주요 화면 캡처 | 시작·점검 결과·원문 근거·모바일 | screenshots/와 보고서 5~6절 |
+| 문제 상황·AI 활용·해결 과정·최종 결과 | 사례마다 네 요소를 구분 | ai-collaboration.md와 보고서 7~9절·11절 |
 | 개발 보고서 제출 | 인쇄 가능한 HTML 및 제공되는 PDF | development-report.html |
 | 만든 앱의 기능과 원리 설명 | 사용자 실행 순서와 데이터 흐름 | README 및 보고서 2~3절 |
 
@@ -58,4 +58,6 @@ R&Q 공시팀은 DART 접수 전 감사·검토보고서의 구조를 체크리�
 - 캡처는 screenshots/01-home.jpg, 02-findings.jpg, 03-evidence.jpg, 04-mobile.jpg다. Agent의 실행 결과이며 사용자의 직접 UAT는 미실행이다.
 - 배포 상태: Sites 공개 배포 성공(2026-10-27 KST). 비인증 HTTP 200 및 공개 주소의 합성 샘플 실행을 확인했다. Vercel용 정적 배포 설정도 저장소에 포함했다.
 - 독립 검토 상태: 작성자와 동일 모델의 별도 컨텍스트에서 독립 소스 검토를 수행했다. 숨겨진 DOM 잔존 1건을 재현해 수정하고 회귀 시험을 추가했다. 다른 모델 리뷰와 현업 품질 승인은 미실행이다.
-- 실제 업무 데이터의 대량 검증, 업무시간 감소 효과와 담당자의 최종 품질 승인은 별도 확인 사항이다. 수행하지 않은 검증을 통과로 쓰지 않는다.
+- 실제 DSD 28건의 실행과 반복 결과 일치는 확인했다. 담당자 정답 대조, 업무시간 감소 효과와 담당자의 최종 품질 승인은 별도 확인 사항이다. 수행하지 않은 검증을 통과로 쓰지 않는다.
+
+2026-10-28 보완: 신규 오류 예시 생성 없이 전달받은 DSD 28건으로 실행을 확인했다. 합성 체험은 기존 공개 경로를 유지한다. 강의 적용과 첨부 Word 초안 대조 결과는 course-alignment.md, attachment-reconciliation.md에 기록했다.

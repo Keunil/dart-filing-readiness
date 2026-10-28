@@ -9,33 +9,66 @@
     "failed": 0,
     "skipped": 0
   },
-  "pdf_pages": 11,
+  "pdf_pages": 14,
   "sha256": {
-    "public/app.css": "8ad3accf26141c52d14f40fabc15b042c605dd416aa2a992a5afd52ed20e720e",
-    "public/app.js": "e121b65b5e968e175d6cf264cd3801d975c297d02dafa15cb16247fe81d9e802",
+    "public/app.css": "41f0bce2188b27b8940117a4bb5741ae4380a7142897f370e93b52da17f3ef21",
+    "public/app.js": "560f54a4999045fad709c5b57457a487edc2b65142c70649e300567addd82186",
     "public/assets/favicon.ico": "e9f698997d5ab98afeb24fc818327e8e66d2b736ea1f426aa3c1962e64b8d300",
-    "public/assets/pwc-logo.svg": "64c179ca0c5adbe94f97a9cc4324a1eae263ffe2eca8719c33e539de4c005df2",
-    "public/core/checklist-history.js": "3598d4eeb4c57662f9a90df2819cef5d34579240ae3b75fbdf2f6a34ce68ae9c",
-    "public/core/checklist-interim.js": "e4b594e5ca342185b7a179f07e21f3a34380c5492ff4c67f746110e88ee697d9",
-    "public/core/checklist-notes.js": "36cca80364b46a83db4d897d4a0241b9190fc8a90ef36cf4363983a18fe5d4cc",
-    "public/core/checklist-rules.js": "36ef44de418416611841730f682e688e46c70873e99af88861fb00b086f8df07",
-    "public/core/dsd-read.js": "78b801fc92b92ac3111b1f75f7903928abe9547debd35c243832745205ae0a6f",
-    "public/core/dsd-view.js": "ef1adcb118c6386bb51a0d6011113f5c1e4893c95f05d455d2ab1276dcda37c1",
-    "public/core/dsd-xlsx.js": "a5a203c09d2ad4dd12fb95059fb11a499ec1d35c6db43599b544fc0f27760d4a",
-    "public/engine.js": "18127b1d60a5b69bd8d3e59f8f014e15027bb254d2d9eab5ce7fe077ab33465d",
-    "public/export.js": "01108e1518c433b61117305c6622c08e65e6f4569c46d47e0fe0a4fcc73b175c",
-    "public/index.html": "f96961e1d9f71dbf71364628f2b1ed4321a95ec741d9cd1b15458b19df0cb047",
-    "public/samples.js": "8c7cddb0d036e03ea8e933959569982aa50421665e4aeab4b3718cbf0cec30d9",
+    "public/assets/pwc-logo.svg": "1a8ea36e1ec7d9d534f0d47dee947ffff70873b3e07693cdd6bae4764998a812",
+    "public/core/checklist-history.js": "36e82b78f20a187a62128fccc110646c414973fa6334bc42b04f6ab674334860",
+    "public/core/checklist-interim.js": "3bc3b332ecfb549a56ede95334a274262e54a52daed09cbd9c403698a3673331",
+    "public/core/checklist-notes.js": "8459b18ef77019b7e4bcd950548989144eed4b6bb28b3fa8a5579f1aa39f7540",
+    "public/core/checklist-rules.js": "f436107d3a2e5c5cfbdb0c6fedae247730988e25dbc485529b3e0ab6e2bf2e61",
+    "public/core/dsd-read.js": "79fd3a345ff48a5171b0185e5879708e1a300a46450770da53b13f2d4ea3fa7b",
+    "public/core/dsd-view.js": "43446e0dd39916922e9a1fc99a2647d2770a391ba45475ad1cc10cb071848a14",
+    "public/core/dsd-xlsx.js": "fe635b4ff96620a91060f2d87d1e065ca30294928f35a3df512ad077ae86104a",
+    "public/engine.js": "dd4125a413bf5b6d665ae5aa986155427b2fd153971bf9afed1ad811e1b5b940",
+    "public/export.js": "f371dd022497421f67d730842a6bf887fa4d239e1169daf9cd3270d0466d6aa0",
+    "public/index.html": "858ade4325f11670741b917359e2dba69426595fd7fe35ce33bba05a5ff6d745",
+    "public/samples.js": "493f8f3077f29e73a69ecd41e79da7b8277bfc1cd45c946725b4a5c66c359b7f",
     "screenshots/01-home.jpg": "d784861f7fc8b9b43432615df9093a3e26442334182ead09e9bbb0c70403f039",
     "screenshots/02-findings.jpg": "824c82c7620cbd30c9e719858ec69e17d8fc0c35957c69641e5e321c86455a95",
     "screenshots/03-evidence.jpg": "669d219fd98d07160455ae99f4b861dacaa4851e3ea3b429597561089e9a2db7",
     "screenshots/04-mobile.jpg": "382f0d370cd83856ccca92832e985b5de74b357ccd032bf33a6ef8597484bae7",
-    "submission/DART-Filing-Readiness-과제2.pdf": "7ab39c44b37097bff3aab4ba50c64453b8e914a535aace65015d85b907a12efc"
+    "submission/DART-Filing-Readiness-과제2.pdf": "5d1b82fcae757b3fbca4a47d34aba9001057ac29f65b24f9ccdcd25abf4c6730",
+    "docs/ai-collaboration.md": "5c2e0633f9acb14c94c2391f17e5e4f20ac119a833d49224936e6f2ade95ba5d",
+    "docs/attachment-reconciliation.md": "c44662df8752ebbcdd6f9fed69438882174f15c80ab8356f7fe4672832815d6f",
+    "docs/course-alignment.md": "7ad84b384d52d7bedd2884c914ce15ae58bb29c8fe0b87c717f675a2832bc7bb",
+    "docs/design.md": "4f784ac03752444d3c64b04817a14db1e8730feb68b36509fcecc63ee4bc77ce",
+    "docs/development-report.html": "8810c2e4da834d5369504186f77ff2ac06e21e1fb5bd62f34273289cf12cb08b",
+    "docs/provenance.md": "88b5a2081ca3ca79c48a574815937adca582e1353a2313d0d823bcca20f846d0",
+    "docs/real-dsd-validation.json": "23cd94fbce67c29f6a476fa3e8e7f32ac50cdf2a73840ff559a11b0ef6c7a6d5",
+    "docs/requirements.md": "c7220b37397bc3af33eee41b5f48de3c2b809a0107b0eaed471a2c21c7489a46",
+    "docs/validation.md": "c7c6c174e6f0d702f7636e902c4cc10ad5643b1fb0efd5f3ec1ab9923f070f7a"
   },
   "author": {
     "name": "최근일",
     "student_id": "2026505521",
     "organization": "삼일회계법인",
     "role": "회계사 · Assurance"
-  }
+  },
+  "revision_baseline": "a591d87",
+  "real_dsd_validation": {
+    "documents": 28,
+    "analyzed": 28,
+    "failed": 0,
+    "counts": {
+      "fail": 92,
+      "warn": 61,
+      "manual": 153,
+      "pass": 888,
+      "na": 430
+    },
+    "repeat_equal": true,
+    "oracle_comparison": false
+  },
+  "live_browser_smoke": {
+    "http_status": 200,
+    "rows": 58,
+    "csv": true,
+    "xlsx": true,
+    "mobile_width": 390,
+    "pageerrors": 0
+  },
+  "attachments_reviewed": 2
 }
