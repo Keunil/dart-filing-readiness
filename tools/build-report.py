@@ -12,10 +12,10 @@ import re
 root=Path.cwd();tree=html.fromstring((root/'docs/development-report.html').read_text(encoding='utf-8'));d=Document();sec=d.sections[0]
 sec.page_width=Mm(210);sec.page_height=Mm(297);sec.top_margin=Mm(16);sec.bottom_margin=Mm(16);sec.left_margin=Mm(18);sec.right_margin=Mm(18)
 for name in ['Normal','Title','Subtitle','Heading 1','Heading 2','Caption','List Bullet','List Number']:
- st=d.styles[name];st.font.name='맑은 고딕';st.font.color.rgb=RGBColor(0,0,0);st.font.italic=False;st.element.get_or_add_rPr().get_or_add_rFonts().set(qn('w:eastAsia'),'맑은 고딕')
- st.paragraph_format.space_after=Pt(4);st.paragraph_format.line_spacing=1.15
+ st=d.styles[name];st.font.name='Arial';st.font.color.rgb=RGBColor(0,0,0);st.font.italic=False;st.element.get_or_add_rPr().get_or_add_rFonts().set(qn('w:eastAsia'),'맑은 고딕')
+ st.paragraph_format.space_after=Pt(4);st.paragraph_format.line_spacing=1.2
 normal=d.styles['Normal'];normal.font.size=Pt(10.5)
-for name,size in [('Title',25),('Subtitle',15),('Heading 1',16),('Heading 2',12),('Caption',8.5)]:d.styles[name].font.size=Pt(size)
+for name,size in [('Title',24),('Subtitle',15),('Heading 1',16),('Heading 2',12),('Caption',8.5)]:d.styles[name].font.size=Pt(size)
 d.styles['Title'].font.name='Georgia';d.styles['Title'].element.rPr.rFonts.set(qn('w:eastAsia'),'바탕')
 for name in ['Heading 1','Heading 2']:
  d.styles[name].paragraph_format.space_before=Pt(9);d.styles[name].paragraph_format.space_after=Pt(6)
@@ -59,9 +59,9 @@ def table(e):
    cell.width=Mm(174*widths[i]);cell.vertical_alignment=WD_CELL_VERTICAL_ALIGNMENT.CENTER
    cell.text='';fill(cell.paragraphs[0],el)
    for p in cell.paragraphs:
-    p.paragraph_format.space_after=Pt(3);p.paragraph_format.space_before=Pt(3);p.paragraph_format.line_spacing=1.15
-    if i>0 and re.fullmatch(r'[\d /]+',cell.text):p.alignment=WD_ALIGN_PARAGRAPH.CENTER
-    for r in p.runs:r.font.size=Pt(9.2);r.bold=row_idx==0
+    p.paragraph_format.space_after=Pt(3);p.paragraph_format.space_before=Pt(3);p.paragraph_format.line_spacing=1.2
+    if i>0 and re.fullmatch(r'[\d, /]+',cell.text):p.alignment=WD_ALIGN_PARAGRAPH.CENTER
+    for r in p.runs:r.font.size=Pt(9);r.bold=row_idx==0
    pr=cell._tc.get_or_add_tcPr(); borders=OxmlElement('w:tcBorders')
    for edge in ['top','left','bottom','right']:
     x=OxmlElement('w:'+edge);x.set(qn('w:val'),'single');x.set(qn('w:sz'),'4');x.set(qn('w:color'),'D9D9D9');borders.append(x)
@@ -116,4 +116,7 @@ d.core_properties.title='공시 전 문서 점검 웹 애플리케이션 개발 
 out=root/'submission/과제2_2026521505_최근일_최종.docx';# Remove inherited Word template title rules and theme decoration.
 for part in [d.styles.element,d.element]:
  for node in list(part.iter(qn('w:pBdr'))):node.getparent().remove(node)
+for fonts in d.styles.element.iter(qn('w:rFonts')):
+ for attr in list(fonts.attrib):
+  if attr.lower().endswith('theme'):del fonts.attrib[attr]
 d.save(out);print(out)
