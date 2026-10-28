@@ -3,7 +3,7 @@
   "app_url": "https://dart-filing-readiness-keunil.rmsdlf0330.chatgpt.site",
   "github_url": "https://github.com/Keunil/dart-filing-readiness",
   "source_baseline": "0d4d1c6a2753c1c5e5499495dcd5fb67a152605e",
-  "deployment_source": "47e869177ae2ce8b96cbefcfd6a9d6286d838795",
+  "deployment_source": "7a3421626c897b6276c434f758538a203b6c475c",
   "node_tests": {
     "passed": 11,
     "failed": 0,
@@ -28,7 +28,7 @@
     "screenshots/03-evidence.jpg": "602b590c26ab28e83e891bb835d716a23c3a5e3082e9cf1d85f82cd321a36fb1",
     "screenshots/04-mobile.jpg": "716a3907ff0f44a0e02a8703dae67a193cfab8c4b346527e5e05989ebbef67fe",
     "submission/DART-Filing-Readiness-과제2.pdf": "435723c17a97c4d2ad4b66694eae0cc52f81039005ca46a81b1b767572bffab7",
-    "docs/ai-collaboration.md": "e5c50a45640ed639ea642386bd93529d40ce4633826ad166abcd5447c9d71488",
+    "docs/ai-collaboration.md": "7064ce6dd1331f3a0db9c0ce36cf085d15800055155ca082f8de7a8003024a21",
     "docs/attachment-reconciliation.md": "c44662df8752ebbcdd6f9fed69438882174f15c80ab8356f7fe4672832815d6f",
     "docs/course-alignment.md": "b89dffcf041b73483d8ee23d92047e933544c9d85f48a1cc9dc67ad006a5833a",
     "docs/design.md": "314be27105866c1322e8e51050b19e81deff9e5fac0128823ff01328c102a1b9",
@@ -36,7 +36,7 @@
     "docs/provenance.md": "641e831b3867c6264e9e8dc51172867bc25351a338fce2faf516caa08412706a",
     "docs/real-dsd-validation.json": "23cd94fbce67c29f6a476fa3e8e7f32ac50cdf2a73840ff559a11b0ef6c7a6d5",
     "docs/requirements.md": "69a2c4fe8e4d381afb27246db87a9c7b594f2d95e32197b44602874573bbf13c",
-    "docs/validation.md": "24b82a81a7e1377f59cee4cabdbe7b8a312f217f2aa025cc572236141c08f704",
+    "docs/validation.md": "278213262eaebe9fd14f0aa09f326f6ea7fc3f6d05b0c674c27926f1880c7b56",
     "docs/feedback-resolution.md": "eae6a7e379aabfefa08411b25627d26e9acbaa6228ab9b3ca7303454528f8c3e",
     "docs/lessons/20261027-hidden-report-is-not-erased.md": "3d9547356a4e61095143f1d7082556dcd7b11fc31d7c1baad3e274cb78fd4bff",
     "docs/lessons/README.md": "9a3760737e9ac682217242118e7906344a54072eaf936cb6ddb109edc70ec2c2",
@@ -69,18 +69,28 @@
     },
     "repeat_equal": true,
     "oracle_comparison": false,
-    "latest_zip_recheck": true
+    "latest_zip_recheck": true,
+    "repeated_all_item_statuses_equal": true
   },
   "live_browser_smoke": {
-    "http_status": 200,
+    "mode": "actual DSD file",
+    "case": "DSD-04",
     "rows": 58,
+    "error_filter_rows": 1,
+    "counts": {
+      "fail": 1,
+      "warn": 2,
+      "manual": 9,
+      "pass": 39,
+      "na": 7
+    },
     "csv": true,
     "xlsx": true,
     "mobile_width": 390,
     "pageerrors": 0
   },
   "attachments_reviewed": 2,
-  "deployment_version": 4,
+  "deployment_version": 5,
   "word_pages": 6,
   "word_images": 4,
   "word_hyperlinks": 2,
