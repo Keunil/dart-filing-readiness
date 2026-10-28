@@ -3,7 +3,7 @@
   "app_url": "https://dart-filing-readiness-keunil.rmsdlf0330.chatgpt.site",
   "github_url": "https://github.com/Keunil/dart-filing-readiness",
   "source_baseline": "0d4d1c6a2753c1c5e5499495dcd5fb67a152605e",
-  "deployment_source": "7a3421626c897b6276c434f758538a203b6c475c",
+  "deployment_source": "fe21b58778a42dae10e9b20964fc3bc037131aa1",
   "node_tests": {
     "passed": 11,
     "failed": 0,
@@ -36,7 +36,7 @@
     "docs/provenance.md": "641e831b3867c6264e9e8dc51172867bc25351a338fce2faf516caa08412706a",
     "docs/real-dsd-validation.json": "23cd94fbce67c29f6a476fa3e8e7f32ac50cdf2a73840ff559a11b0ef6c7a6d5",
     "docs/requirements.md": "69a2c4fe8e4d381afb27246db87a9c7b594f2d95e32197b44602874573bbf13c",
-    "docs/validation.md": "ad4e6d3a9be7a1cc469585613ec9beca01f8582a083175a7c4124197c686b6b2",
+    "docs/validation.md": "5c6059318aeb34ab5ebb02c3d97ab36764716490cf2c708c9b1499ca437bc2e7",
     "docs/feedback-resolution.md": "eae6a7e379aabfefa08411b25627d26e9acbaa6228ab9b3ca7303454528f8c3e",
     "docs/lessons/20261027-hidden-report-is-not-erased.md": "3d9547356a4e61095143f1d7082556dcd7b11fc31d7c1baad3e274cb78fd4bff",
     "docs/lessons/README.md": "9a3760737e9ac682217242118e7906344a54072eaf936cb6ddb109edc70ec2c2",
@@ -90,7 +90,7 @@
     "pageerrors": 0
   },
   "attachments_reviewed": 2,
-  "deployment_version": 5,
+  "deployment_version": 6,
   "word_pages": 6,
   "word_images": 4,
   "word_hyperlinks": 2,
