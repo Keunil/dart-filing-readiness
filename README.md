@@ -1,8 +1,10 @@
 # DART Filing Readiness
 
+본 앱은 과제 수행을 위한 개인 프로토타입이며, 삼일회계법인 또는 PwC의 공식 서비스·업무도구가 아니고 회사의 검토·승인을 받은 제품이 아닙니다.
+
 DART 접수 전 감사·검토보고서의 구조를 브라우저에서 점검하는 과제용 웹 애플리케이션입니다. 업무 집중기에 반복되는 수기 체크를 보조하고, 담당자가 확인할 오류와 원문 위치를 함께 보여 줍니다.
 
-- 웹 앱: https://dart-filing-readiness-keunil.tasty-note-8705.chatgpt.site
+- 웹 앱: https://dart-filing-readiness-keunil.rmsdlf0330.chatgpt.site
 - 소스: [Keunil/dart-filing-readiness](https://github.com/Keunil/dart-filing-readiness)
 - 개발 보고서: [docs/development-report.html](docs/development-report.html)
 - 요구사항과 완료 기준: [docs/requirements.md](docs/requirements.md)
@@ -14,7 +16,7 @@ DART 접수 전 감사·검토보고서의 구조를 브라우저에서 점검�
 ## 주요 기능
 
 1. 실제 DSD를 선택하거나 가상 회사의 체험 DSD로 시작합니다.
-2. 감사인 이름·고유번호(CIK)·주소·대표자 기준을 지정합니다.
+2. 감사인 이름·식별값(DSD AUDIT_CIK)·주소·대표자 기준을 지정합니다.
 3. 문서 코드를 확인하고 해당 보고서의 규칙으로 점검합니다.
 4. 오류, 확인 필요, 수동 확인, 통과, 해당 없음을 구분해 표시합니다.
 5. 결과를 검색·필터링하고 원문 근거를 확인합니다.
@@ -34,7 +36,7 @@ DART 접수 전 감사·검토보고서의 구조를 브라우저에서 점검�
   → 사람이 검토 / 결과 파일 다운로드
 ```
 
-웹 서버는 HTML·CSS·JavaScript만 제공합니다. DSD와 결과는 브라우저 메모리에서 처리하며 서버에 업로드하지 않습니다. 콘텐츠 보안 정책의 `connect-src 'none'`으로 분석 중 네트워크 연결을 제한합니다. 새로고침하거나 창을 닫으면 메모리의 파일·결과가 사라집니다. 사용자가 내려받은 파일은 사용자 기기에 남습니다.
+웹 서버는 HTML·CSS·JavaScript만 제공합니다. 점검 과정에서 앱 코드가 DSD를 별도 업로드하거나 localStorage에 저장하지 않도록 구현했습니다. 이는 독립 보안감사나 호스팅 접속 로그 처리까지 확인했다는 뜻은 아닙니다. 콘텐츠 보안 정책의 `connect-src 'none'`으로 분석 중 네트워크 연결을 제한합니다. 새로고침하거나 창을 닫으면 메모리의 파일·결과가 사라집니다. 사용자가 내려받은 파일은 사용자 기기에 남습니다.
 
 ## 로컬 실행
 
@@ -75,3 +77,7 @@ node --test tests/*.test.mjs
 - 신규 오류 예시는 만들지 않았으며 기존 공개 체험만 유지했습니다.
 - 고객 파일을 복사하지 않고 기존 엔진으로 읽는 실행기: `tools/validate-private-dsd.mjs`.
 - 첨부한 보고서 초안·인계문서와 독립 앱의 범위 차이: [docs/attachment-reconciliation.md](docs/attachment-reconciliation.md).
+
+2026-10-28 리뷰 반영: 공식 로고와 전용 색상을 제거하고 개인 과제 안내, 오류 후보의 의미, 확인 주체, 식별값 및 집계 단위를 명확히 했습니다. 보고서 최신 편집 파일은 submission/과제2_공시체크리스트_제출보고서.docx입니다.
+
+최신 공개 배포는 Sites 버전3(2026-10-28 20:31 KST)이며 위 앱 URL을 사용합니다. 공개 앱 동작 확인은 Codex 브라우저 자동화 결과입니다. 작성자의 독립 수동 기능 확인과 실제 업무 품질 승인은 수행하지 않았습니다.

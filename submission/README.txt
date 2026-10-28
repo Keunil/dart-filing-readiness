@@ -1,17 +1,12 @@
-DART Filing Readiness 과제 2 제출 자료
+과제 2 최종 제출 자료
 
 제출자: 최근일 2026505521
-웹 앱: https://dart-filing-readiness-keunil.tasty-note-8705.chatgpt.site
+최신 Word: 과제2_공시체크리스트_제출보고서.docx
+동일 내용 PDF: DART-Filing-Readiness-과제2.pdf
+웹 앱: https://dart-filing-readiness-keunil.rmsdlf0330.chatgpt.site
 GitHub: https://github.com/Keunil/dart-filing-readiness
+작업 브랜치: codex/assignment2-20261028
 
-LearnUs에 제출할 개발 보고서: DART-Filing-Readiness-과제2.pdf
-편집 원본: docs/development-report.html
-강의 적용: docs/course-alignment.md
-실제 DSD 28건 익명 검증: docs/real-dsd-validation.json
-추가 Word 자료 대조: docs/attachment-reconciliation.md
+추가 리뷰를 반영해 공식 로고·전용 색상을 제거하고 개인 과제 안내, 식별값, 집계 단위와 Codex 확인 범위를 정리했습니다. 실제 화면4개와 클릭 가능한 링크7개를 포함했습니다. Sites 버전3 공개 배포 및 자동 기능 확인을 마쳤습니다.
 
-신규 오류 DSD는 만들지 않았습니다. 실제 고객 원본과 프로필·원문은 제출 묶음에 포함하지 않았습니다. 기존 가상 체험 화면은 평가자가 파일 없이 앱을 사용할 수 있도록 유지했습니다.
-
-체험 순서: 오류 샘플 점검 → 오류 필터 → 50번 원문 근거 → 닫기 → 수정본 점검 → Excel 다운로드.
-
-실제 자료 28건의 실행·반복 일치와 기존 회귀 시험 11/11을 확인했습니다. 공시팀 정답 대조, 사용자의 직접 UAT와 LearnUs 업로드는 수행하지 않았습니다.
+실제 자료28건의 수치는 기존 실행 증거이며 정확도 승인이 아닙니다. 고객 원본과 프로필값은 포함하지 않았습니다. 작성자의 독립 수동 확인 및 LearnUs 업로드는 수행하지 않았습니다.

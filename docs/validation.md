@@ -95,3 +95,15 @@ Codex in-app browser에서 로컬 HTTP 앱을 열고 실제 화면 조작으로 
 - 교수 강의안 파일·절·해시는 course-alignment.md에, 추가 Word 2건과 범위 차이는 attachment-reconciliation.md에 기록했다.
 - 공개 URL: 자동 HTTP 클라이언트는 403을 받았으나 Edge 브라우저에서는 HTTP 200과 실제 앱 로드를 확인했다. Sites 메타데이터도 public/active/버전2이다. 인증 우회 토큰은 사용하지 않았다.
 - 오늘의 공개 Edge 스모크: 58개 결과, 오류 필터 4행, CSV/XLSX 실제 다운로드, 비우기 후 행 텍스트 0, 모바일 viewport/문서 폭 390/390, pageerror 0.
+
+## 2026-10-28 20시대 리뷰 수정과 재배포
+
+- 공식 로고·favicon 제거, 회색 디자인과 개인 과제 안내 적용. 회사 조직·인력의 단정은 개인 경험으로 한정했다.
+- 감사인 식별값(DSD AUDIT_CIK), 오류 후보, 집계 단위와 확인 주체를 명확히 했다. 판정 조건·규칙 번호·수치는 바꾸지 않았다.
+- Node 회귀 시험 11/11, 실패0/건너뜀0. CSV 표시명 검사는 오류 후보로 갱신했다.
+- 로컬 및 공개 버전3에서 Codex Edge 자동화로 58행/오류 후보 필터4행, CSV/XLSX, 근거 창 닫기, 문서 비우기와 모바일390/390, pageerror0 확인. 작성자 독립 수동 확인은 미실행.
+- 원래 실제 입력 폴더가 없어 추가 전체 재실행은 미완료다. 다른 위치에서 원래 바이트27/28만 확인했다. 기존 run02/run03의 28건 실행·반복 일치 근거를 보존하며 이번 전체 재실행 성공으로 쓰지 않는다.
+- 배포 연결은 DNS 일시 실패·기한 지난 토큰으로 실패한 뒤 복구했다. 갱신한 자격정보로 소스 push와 archive 저장을 완료했다.
+- Sites 버전3, 소스 b5dd2c53b821e756438bc4182cf57fed25b013b0. 배포 appgdep_6ae1dcf2b070819182f70ae3949b4bcd가 20:31 KST succeeded를 반환했다.
+- 새 공개 주소: https://dart-filing-readiness-keunil.rmsdlf0330.chatgpt.site
+- 최신 Word를 Word에서 직접 PDF로 출력했다. 14쪽, 이미지4개, 클릭 가능한 하이퍼링크7개. 파일에 원본DSD·프로필값·회사 파일명은 포함하지 않았다.

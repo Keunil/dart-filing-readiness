@@ -12,4 +12,4 @@
 
 이번에 본 28건은 집계를 확인했고 개발 자료로 사용했으므로 독립 홀드아웃이라고 부르지 않는다. 강의 전체나 고객 원본은 공개 저장소에 넣지 않는다.
 
-참고한 PwC 디자인 지침: 로컬 robotic_web의 `.agents/skills/pwc-design-guide/SKILL.md`, `references/digital-design-system.md`. 보고서에는 기존 공식 SVG 원본, 흰 배경·검정 본문·Orange #FD5108 구분선, Georgia/바탕 제목을 유지했다.
+참고한 PwC 디자인 지침: 로컬 robotic_web의 `.agents/skills/pwc-design-guide/SKILL.md`, `references/digital-design-system.md`. 추가 리뷰에 따라 공식 SVG와 회사 전용 색상은 제거했다. 흰 배경·검정 본문·회색 강조, 가독성과 여백의 원칙을 적용한다.
