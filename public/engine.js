@@ -18,7 +18,7 @@ function validProfile(value) {
     }
     profile[key] = text.trim();
   }
-  if (!/^\d{8}$/.test(profile.cik)) throw new Error('감사인 식별값는 숫자 8자리여야 합니다.');
+  if (!/^\d{8}$/.test(profile.cik)) throw new Error('감사인 식별값은 숫자 8자리여야 합니다.');
   return profile;
 }
 

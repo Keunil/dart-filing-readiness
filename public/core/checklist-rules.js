@@ -1097,7 +1097,7 @@ export const RULES = [
     get desc() { return `회사 고유번호와 감사인 식별값(${AUDITOR.cik})`; },
     check(doc) {
       const s = doc.header.summary, out = [];
-      out.push(onHead(s.AUDIT_CIK === AUDITOR.cik ? ok(`감사인 식별값 ${s.AUDIT_CIK}`) : bad(`감사인 식별값가 '${s.AUDIT_CIK || '빈칸'}'입니다. ${AUDITOR.cik}로 입력해야 합니다.`, null, s.AUDIT_CIK), 'AUDIT_CIK'));
+      out.push(onHead(s.AUDIT_CIK === AUDITOR.cik ? ok(`감사인 식별값 ${s.AUDIT_CIK}`) : bad(`감사인 식별값이 '${s.AUDIT_CIK || '빈칸'}'입니다. ${AUDITOR.cik}로 입력해야 합니다.`, null, s.AUDIT_CIK), 'AUDIT_CIK'));
       const cik = doc.header.regcik || doc.meta.regcik;
       if (!/^\d{8}$/.test(cik || '')) out.push(onHead(bad(`회사 고유번호가 '${cik || '빈칸'}'입니다.`), 'REGCIK'));
       else out.push(onHead(ok(`회사 고유번호 ${cik} (${doc.header.company || doc.meta.regname})`), 'REGCIK'));
